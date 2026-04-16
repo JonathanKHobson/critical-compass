@@ -2,9 +2,9 @@
 
 This release packages Critical Compass for friendly beta distribution.
 
-- Claude plugin zip for Claude Cowork/custom plugin upload.
-- MCPB Desktop Extension for Claude Desktop Settings > Extensions.
-- Standalone skill artifacts for fallback/reference mode.
+- Claude Cowork add-on file for Claude Cowork, Claude Code, and Codex.
+- Claude Desktop extension file for Claude Desktop Settings > Extensions.
+- Offline reference files for fallback use.
 - Diagnostics prompt for install troubleshooting.
 - Checksums for all downloadable artifacts.
 
