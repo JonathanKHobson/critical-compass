@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Download Critical Compass</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17211f;
+      --muted: #54615e;
+      --paper: #f8fbf9;
+      --line: #cbd8d3;
+      --teal: #0f766e;
+      --coral: #d95f43;
+      --leaf: #527a39;
+      --gold: #b7791f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.55;
+      letter-spacing: 0;
+    }
+    header, main, footer { width: min(1040px, calc(100% - 32px)); margin: 0 auto; }
+    header { padding: 44px 0 22px; display: grid; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 16px; }
+    .brand img { width: 76px; height: 76px; border-radius: 8px; border: 1px solid var(--line); }
+    h1 { margin: 0; font-size: 2.25rem; line-height: 1.1; }
+    h2 { margin: 0 0 10px; font-size: 1.35rem; }
+    p { margin: 0 0 12px; }
+    .lead { max-width: 760px; color: var(--muted); font-size: 1.08rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
+    .card { border: 1px solid var(--line); border-radius: 8px; padding: 18px; background: #fff; }
+    .tag { display: inline-block; color: #fff; background: var(--teal); border-radius: 8px; padding: 4px 8px; font-size: .85rem; }
+    .button {
+      display: inline-block;
+      margin: 6px 8px 0 0;
+      padding: 10px 13px;
+      border-radius: 8px;
+      background: var(--teal);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .button.secondary { background: var(--coral); }
+    .button.ghost { background: var(--leaf); }
+    section { padding: 14px 0; }
+    ol, ul { padding-left: 22px; }
+    code { overflow-wrap: anywhere; }
+    table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+    td { border-top: 1px solid var(--line); padding: 8px 6px; vertical-align: top; }
+    footer { padding: 28px 0 44px; color: var(--muted); }
+    .notice { border-left: 4px solid var(--gold); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img alt="Critical Compass badge" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='16' fill='%23f8fbf9'/%3E%3Ccircle cx='60' cy='60' r='44' fill='none' stroke='%230f766e' stroke-width='8'/%3E%3Cpath d='M72 28 62 66 28 78l30-26z' fill='%23d95f43'/%3E%3Cpath d='M48 92 58 54l34-12-30 26z' fill='%23527a39'/%3E%3Ccircle cx='60' cy='60' r='7' fill='%2317211f'/%3E%3C/svg%3E">
+      <div>
+        <span class="tag">Critical Compass 0.1.0-beta.3</span>
+        <h1>Download Critical Compass</h1>
+      </div>
+    </div>
+    <p class="lead">Pressure-test drafts, claims, grant language, reports, advocacy copy, and public statements before you use them.</p>
+  </header>
+  <main>
+    <section class="grid">
+      <div class="card">
+        <h2>Claude Cowork / Custom Plugin</h2>
+        <p><strong>Use the Claude Plugin zip for Claude Cowork/custom plugin upload.</strong></p>
+        <a class="button" href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.3/critical-compass-plugin.zip" download>Download plugin zip</a>
+      </div>
+      <div class="card">
+        <h2>Claude Desktop Extension</h2>
+        <p><strong>Use the MCPB for Claude Desktop Settings > Extensions.</strong></p>
+        <a class="button secondary" href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.3/critical-compass-0.1.0.mcpb" download>Download MCPB</a>
+      </div>
+      <div class="card">
+        <h2>Fallback Reference Mode</h2>
+        <p><strong>Use the standalone skill only as a fallback/reference mode.</strong></p>
+        <a class="button ghost" href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.3/critical-compass.skill" download>Download .skill</a>
+        <a class="button ghost" href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.3/skill.zip" download>Download skill zip</a>
+      </div>
+    </section>
+    <section class="card notice">
+      <h2>Expected Warning</h2>
+      <p><strong>Claude's unverified developer/access warning is expected</strong> for local plugins and extensions. Install only if you trust the source.</p>
+      <p><strong>If install fails, use the included diagnostics prompt</strong> with Claude, Claude Code, or Codex before changing files by hand.</p>
+    </section>
+    <section class="card">
+      <h2>Which File Do I Need?</h2>
+      <ol>
+        <li>Trying Claude Cowork or plugin upload? Pick <code>critical-compass-plugin.zip</code>.</li>
+        <li>Trying Claude Desktop Settings > Extensions? Pick <code>critical-compass-0.1.0.mcpb</code>.</li>
+        <li>Only need offline guidance if the connector fails? Pick <code>critical-compass.skill</code> or <code>skill.zip</code>.</li>
+      </ol>
+      <p>More detail lives in <code>github-release-body.md</code>.</p>
+    </section>
+    <section class="card">
+      <h2>Checksums</h2>
+      <table><tr><td>critical-compass-0.1.0.mcpb</td><td><code>b4cee828dee2b068d89bfe5940810b3d6d5275663f372fc75ad2b09bf059d786</code></td></tr>
+<tr><td>critical-compass-plugin.zip</td><td><code>be329caa7c4f0a583251f5165e6a2d8a7ac415bc21157b37105f706ade7183db</code></td></tr>
+<tr><td>critical-compass.skill</td><td><code>4bdcb83b25367a18cd321a81bf63c99c2b6e00f989f9921187632cf07a95f9cf</code></td></tr>
+<tr><td>skill.zip</td><td><code>afcb323c8c1f015b6821411abf0ce966f3e06c1737ec748e8b1204073988f085</code></td></tr></table>
+    </section>
+  </main>
+  <footer>
+    <p>Fact-checking is scaffold-first by default: no Google, Brave, or provider key is required.</p>
+  </footer>
+</body>
+</html>
