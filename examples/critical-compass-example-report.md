@@ -30,26 +30,26 @@ Before using this text, ask whether your nonprofit audience already feels the AI
 - Overgeneralization (Critical)
   KB ID: ct:biases:methodology:overgeneralization
   Where: [redacted source excerpt]
-  Why it matters: Presented as settled fact across all nonprofit contexts - but many small orgs have not yet experienced this shift and will not feel urgency from a claim that...
+  Why it matters: Presented as settled fact across all nonprofit contexts.
 - WEIRD Bias (Compassionate)
   KB ID: ct:biases:methodology:weird-bias
   Where: [redacted source excerpt]
-  Why it matters: The model of 'human connection' and 'community trust' reflects Western, educated, institutional organizational contexts. Indigenous-led orgs and newcomer-ser...
+  Why it matters: The model of 'human connection' and 'community trust' reflects Western, educated, institutional organizational contexts.
 - Selection Bias (Critical)
   Where: [redacted source excerpt]
-  Why it matters: The failure patterns reflect orgs that engaged a consultant - self-selected, with some capacity to seek advisory services. Orgs that govern well without cons...
+  Why it matters: The failure patterns reflect orgs that engaged a consultant - self-selected, with some capacity to seek advisory services.
 - Social Desirability Bias (Critical)
   KB ID: ct:biases:methodology:social-desirability-bias
   Where: [redacted source excerpt]
-  Why it matters: Framing compliance-first governance as the wrong approach may cause readers to perform alignment with the change-leadership frame without actually adopting i...
+  Why it matters: Framing compliance-first governance as the wrong approach may cause readers to perform alignment with the change-leadership frame without actually adopting.
 
 ### Key Tension
 
-The framework is designed for audiences who already feel the AI governance problem - but its stated purpose is to create urgency and action in organizations that don't yet feel it, and those two audiences need differe...
+The framework is designed for audiences who already feel the AI governance problem - but its stated purpose is to create urgency and action in organizations that don't yet feel it.
 
 ### Recommended Next Step
 
-Add one focused paragraph to the Central Argument section that explicitly names how AI governance differs from existing PIPEDA/data governance compliance - and why basic data go...
+Add one focused paragraph to the Central Argument section that explicitly names how AI governance differs from existing PIPEDA/data governance compliance.
 
 ## Argument Map
 
@@ -148,11 +148,11 @@ Note: check-worthy means worth verifying, not that the claim is false.
 
 ## Improvement Prompts
 
-- To strengthen Grounding & Scope Fit: Add one sentence naming the evidence type - e.g. 'This framework draws on practitioner observation across Canadian nonprofit consulting engagements' - to set appropriate expecta...
-- To strengthen Assumptions & Context: Add a single paragraph - ideally in the Central Argument - that names the specific ways AI governance differs from PIPEDA/data governance compliance. This is the gap that preven...
-- To strengthen Bias Transparency: Own the standpoint explicitly. A brief author bio or positionality statement at the start - 'This framework reflects X years of consulting with Canadian nonprofits' - would stre...
-- To strengthen Framing & Audience Openness: Add 'diverse' or 'inclusive' to the redacted source principle language. Add one sentence in redacted implementation section for micro-orgs (under 5 staff) that names what governance looks like b...
-- To strengthen Positionality & Power: Add a brief author bio or 'About this framework' note at the start. Consider one sentence acknowledging that Indigenous data governance frameworks (OCAP) and diverse organizatio...
+- To strengthen Grounding & Scope Fit: Add one sentence naming the evidence type - e.g.
+- To strengthen Assumptions & Context: Add a single paragraph - ideally in the Central Argument - that names the specific ways AI governance differs from PIPEDA/data governance compliance.
+- To strengthen Bias Transparency: Own the standpoint explicitly.
+- To strengthen Framing & Audience Openness: Add 'diverse' or 'inclusive' to the redacted source principle language.
+- To strengthen Positionality & Power: Add a brief author bio or 'About this framework' note at the start.
 
 ## Dimension Deep-Dive
 
@@ -219,9 +219,9 @@ Improvement prompt: [redacted source-specific prompt; recommendation retained in
 
 ## Next Steps For Deeper Thinking
 
-- Add a focused paragraph to the Central Argument that names at least two concrete ways AI governance differs from PIPEDA/data governance compliance - this dir...
-- Add a brief positionality or author bio note at the start of the document - one paragraph naming the author's background and where this framework comes from would...
-- Add capacity-tier guidance for micro-orgs (under 5 staff or no formal governance structure) in the redacted implementation section - even two sentences naming what g...
+- Add a focused paragraph to the Central Argument that names at least two concrete ways AI governance differs from PIPEDA/data governance compliance.
+- Add a brief positionality or author bio note at the start of the document.
+- Add capacity-tier guidance for micro-orgs (under 5 staff or no formal governance structure) in the redacted implementation section.
 
 ## Reasoning Trap Checks
 
