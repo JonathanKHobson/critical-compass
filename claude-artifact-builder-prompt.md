@@ -1,3 +1,48 @@
+# Claude Artifact Builder Prompt
+
+Use this when you want Claude to create a shareable Critical Compass web Artifact that mirrors the public landing page.
+
+## Copy-paste prompt for Claude
+
+Copy everything from `BEGIN PROMPT` through `END PROMPT` into Claude.
+
+```text
+BEGIN PROMPT
+
+Create a single HTML Artifact for Critical Compass using the artifact source below. Produce the Artifact directly and keep any explanation outside the Artifact minimal.
+
+Purpose:
+Critical Compass is a Claude AI plugin that helps nonprofits, advocacy teams, and grant writers pressure-test writing before it goes out.
+
+Download URLs:
+- Plugin zip: https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.4/critical-compass-plugin.zip
+- Claude Desktop extension: https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.4/critical-compass-0.1.0.mcpb
+- Skill: https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.4/critical-compass.skill
+- Skill zip: https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.4/skill.zip
+- Full release notes: https://github.com/JonathanKHobson/critical-compass/releases/tag/v0.1.0-beta.4
+
+Terminology lock:
+- Use "plugin", "plugin zip", "extension", "skill", and "skill / offline fallback".
+- Do not use "add-on", "reference file", or "offline reference".
+- Do not invent install support for Codex. Keep Codex as a status note only: "Codex support is being confirmed."
+
+Artifact requirements:
+- Create a single HTML Artifact.
+- Use the exact HTML source below as the Artifact source.
+- Preserve the hero, What is Critical Compass section, download cards, decision table, install guide, FAQ, Advanced section, diagnostics prompt, tabs, hash routing, card borders, spacing, and responsive behavior.
+- Keep all download buttons linked to the GitHub Release URLs above. Do not change them to local paths.
+- Do not add frameworks or external runtime dependencies.
+
+QA checklist:
+- Four download actions are visible near the top: plugin, extension, skill, and skill zip.
+- The decision table filenames are clickable.
+- The skill card includes both critical-compass.skill and skill.zip.
+- Codex does not appear as a supported install row or install flow.
+- The Advanced download verification section stays collapsed by default.
+- The terminology lock is followed.
+
+Artifact source:
+BEGIN ARTIFACT SOURCE
 <!doctype html>
 <html lang="en">
 <head>
@@ -390,3 +435,8 @@ Expected result:
   </script>
 </body>
 </html>
+
+END ARTIFACT SOURCE
+
+END PROMPT
+```

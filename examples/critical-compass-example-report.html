@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redacted Nonprofit Policy Draft - Critical Compass Example Audit</title>
+  <style>
+    :root {
+      --text: #202124;
+      --muted: #5f6368;
+      --rule: #d7d9dd;
+      --surface: #f7f8f9;
+      --green: #2d7d46;
+      --blue: #3f6f9f;
+      --amber: #b56f00;
+      --red: #b3261e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.45;
+      background: #ffffff;
+    }
+    header {
+      border-bottom: 1px solid var(--rule);
+      padding: 28px 28px 18px;
+    }
+    main {
+      display: grid;
+      grid-template-columns: minmax(180px, 240px) minmax(0, 920px);
+      gap: 28px;
+      padding: 24px 28px 56px;
+    }
+    nav {
+      align-self: start;
+      border-right: 1px solid var(--rule);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-right: 18px;
+      position: sticky;
+      top: 16px;
+    }
+    nav a {
+      border-radius: 6px;
+      color: var(--blue);
+      padding: 7px 8px;
+      text-decoration: none;
+    }
+    nav a:focus, nav a:hover { outline: 2px solid var(--blue); outline-offset: 2px; }
+    section {
+      border-bottom: 1px solid var(--rule);
+      padding: 0 0 24px;
+      margin-bottom: 24px;
+    }
+    h1 { font-size: 28px; line-height: 1.15; margin: 0 0 8px; }
+    h2 { font-size: 20px; line-height: 1.2; margin: 0 0 14px; }
+    h3 { font-size: 15px; line-height: 1.25; margin: 14px 0 8px; }
+    p { margin: 0 0 10px; }
+    .meta, .path, .empty, .note { color: var(--muted); font-size: 13px; }
+    .verdict-line { align-items: baseline; display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 10px; }
+    .verdict { color: var(--blue); font-size: 30px; font-weight: 800; }
+    .points { color: var(--muted); font-size: 16px; }
+    .plain-read { font-size: 18px; font-style: italic; margin: 16px 0; max-width: 760px; }
+    .before-use, .callout {
+      border-left: 4px solid var(--amber);
+      background: var(--surface);
+      border-radius: 6px;
+      margin: 12px 0;
+      padding: 12px;
+    }
+    .callout.next { border-left-color: var(--green); }
+    .dimension-row {
+      align-items: center;
+      display: grid;
+      gap: 10px;
+      grid-template-columns: minmax(160px, 260px) minmax(120px, 1fr) 58px;
+      margin: 9px 0;
+    }
+    .bar-track { background: #e8eaed; border-radius: 6px; height: 12px; overflow: hidden; }
+    .bar-track span { display: block; height: 100%; }
+    .bar-track .good { background: var(--green); }
+    .bar-track .mixed { background: var(--amber); }
+    .bar-track .risk { background: var(--red); }
+    .artifact-links div, .claim-item, .ledger-item, .trap-item {
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      margin: 10px 0;
+      padding: 12px;
+    }
+    .artifact-links a { display: inline-block; font-weight: 700; margin-right: 10px; }
+    details { border: 1px solid var(--rule); border-radius: 6px; margin: 9px 0; padding: 10px 12px; }
+    summary { cursor: pointer; font-weight: 700; }
+    ul { margin-top: 6px; padding-left: 22px; }
+    code { white-space: pre-wrap; }
+    @media (max-width: 760px) {
+      main { display: block; padding: 18px; }
+      nav { border-right: 0; border-bottom: 1px solid var(--rule); margin-bottom: 22px; padding: 0 0 14px; position: static; }
+      .dimension-row { grid-template-columns: 1fr; }
+      .score { color: var(--muted); }
+    }
+  </style>
+</head>
+<body data-critical-compass="{&quot;manifest_path&quot;:&quot;[redacted-local-path]">
+  <header>
+    <h1>Redacted Nonprofit Policy Draft - Critical Compass Example Audit</h1>
+    <p class="meta">Read-only Critical Compass artifact viewer · public redacted example</p>
+  </header>
+  <main>
+    <section class="callout" id="public-example-note"><strong>Public example note:</strong> This public example is redacted to protect unpublished source material.</section>
+    <nav aria-label="Artifact sections"><a href="#decision">Decision</a><a href="#argument-map">Argument Map</a><a href="#checkworthy">Evidence Needed Next</a><a href="#external-fact-checks">External Fact Checks</a><a href="#dissent">Dissent</a><a href="#traps">Reasoning Traps</a><a href="#questions">Questions</a><a href="#trust">Trust</a></nav>
+    <div>
+      <section id="decision"><h2>Decision Layer</h2>
+      <div class="verdict-line">
+        <span class="verdict">Moderate Integrity</span>
+        <span class="points">71/100</span>
+      </div>
+      <p class="meta">2026-04-17 · policy · organizer</p>
+      <div class="plain-read">This framework works well as a practitioner tool for audiences who already sense the problem - but it underdelivers on urgency creation, AI-vs-data-governance differentiation, and standalone actionability for cold audiences.</div>
+      <div class="before-use">Before using this text, ask whether your nonprofit audience already feels the AI governance problem - or needs to be convinced it exists and is distinct from what they already do.</div>
+      <div class="dimension-bars"><div class="dimension-row"><div class="dimension-label">Grounding &amp; Scope Fit</div><div class="bar-track" aria-hidden="true"><span class="good" style="width:90%"></span></div><div class="score">18/20</div></div><div class="dimension-row"><div class="dimension-label">Assumptions &amp; Context</div><div class="bar-track" aria-hidden="true"><span class="mixed" style="width:65%"></span></div><div class="score">13/20</div></div><div class="dimension-row"><div class="dimension-label">Bias Transparency</div><div class="bar-track" aria-hidden="true"><span class="mixed" style="width:55%"></span></div><div class="score">11/20</div></div><div class="dimension-row"><div class="dimension-label">Framing &amp; Audience Openness</div><div class="bar-track" aria-hidden="true"><span class="good" style="width:80%"></span></div><div class="score">16/20</div></div><div class="dimension-row"><div class="dimension-label">Positionality &amp; Power</div><div class="bar-track" aria-hidden="true"><span class="mixed" style="width:65%"></span></div><div class="score">13/20</div></div></div>
+      <div class="callout"><strong>Key tension:</strong> The framework is designed for audiences who already feel the AI governance problem - but its stated purpose is to create urgency and action in organizations that don&#x27;t yet feel it, and those two audiences need differe...</div>
+      <div class="callout next"><strong>Next step:</strong> Add one focused paragraph to the Central Argument section that explicitly names how AI governance differs from existing PIPEDA/data governance compliance - and why basic data go...</div>
+      <h3>Artifacts</h3>
+      <div class="artifact-links"><div><a href="file://[redacted-local-path]">Open PDF</a><span class="path">[redacted-local-path]</span></div><div><a href="file://[redacted-local-path]">Open Markdown</a><span class="path">[redacted-local-path]</span></div><div><a href="file://[redacted-local-path]">Open Argdown</a><span class="path">[redacted-local-path]</span></div><div><a href="file://[redacted-local-path]">Open Preview PNG</a><span class="path">[redacted-local-path]</span></div></div>
+    </section>
+      <section id="argument-map"><h2>Argument Map</h2><p><strong>Central claim:</strong> The draft argues that responsible AI governance should be treated as an organizational change challenge, not only a technical or compliance task.</p><p><strong>Claim type:</strong> policy · <strong>Confidence:</strong> medium</p><details open><summary>Supporting reasons</summary><ul><li>[redacted source claim] (redacted source section)</li><li>[redacted source claim]</li><li>Canadian legal context (no AI-specific law) creates both freedom and responsibility to self-govern</li><li>The digital divide inside organizations makes AI literacy a workplace equity issue</li></ul></details><details><summary>Objections</summary><ul><li>Basic data governance (PIPEDA) may already cover what nonprofits need - the framework doesn&#x27;t directly rebut this</li><li>Two-layer governance assumes organizational capacity many small nonprofits don&#x27;t have</li><li>The redacted implementation section is thin for standalone actionability without the paid follow-up</li></ul></details><details><summary>Assumptions</summary><ul><li>The reader already accepts that AI governance is distinct from data governance</li><li>Named accountability ownership works across all org sizes</li><li>The redacted source pattern set represent the full distribution of governance approaches</li></ul></details><details><summary>Missing voices</summary><ul><li>Service recipients and community members who receive nonprofit services</li><li>Indigenous organizations operating under OCAP and data sovereignty frameworks</li><li>Micro-orgs (under 5 staff) who cannot implement the two-layer model</li></ul></details><details><summary>Evidence gaps</summary><ul><li>No concrete case made for how AI governance differs from existing data governance compliance</li><li>No evidence of outcomes from organizations that adopted this framework</li><li>Failure patterns drawn from consulting-engaged orgs - selection bias unacknowledged</li></ul></details><details><summary>Next questions</summary><ul><li>What would a skeptical nonprofit board need to see to be convinced AI governance is distinct from their existing data governance practice?</li><li>What does successful implementation look like - is there an org that used this framework and can serve as a case example?</li></ul></details></section>
+      <section id="checkworthy"><h2>Evidence Needed Next</h2><p class="note">Check-worthy means worth verifying, not false. No external lookup is run by this viewer.</p><article class="claim-item"><h3>A factual claim from the draft about staff AI literacy</h3><p><strong>Type:</strong> factual · <strong>Priority:</strong> medium</p><p><strong>Evidence needed:</strong> Survey data or sector research on staff AI literacy across Canadian nonprofits</p><p><strong>Likely sources:</strong> sector surveys, workforce research, nonprofit technology reports</p><p><strong>Suggested queries:</strong> Canadian nonprofit staff AI literacy survey, nonprofit employee data governance awareness</p><p><strong>Support/contrast:</strong> needs_evidence</p><p><strong>Uncertainty:</strong> Likely directionally correct but scope is overstated - some orgs have sophisticated data governance training</p></article><article class="claim-item"><h3>A causal claim from the draft about organizational trust</h3><p><strong>Type:</strong> causal · <strong>Priority:</strong> not_ranked</p><p><strong>Evidence needed:</strong> Cases of Canadian nonprofits that experienced AI-related trust erosion and their outcomes</p><p><strong>Likely sources:</strong> sector news, case studies, charity sector reports</p><p><strong>Suggested queries:</strong> nonprofit trust crisis AI Canada, Canadian nonprofit AI reputational harm</p><p><strong>Support/contrast:</strong> not_ranked_for_truth</p><p><strong>Uncertainty:</strong> True for the most vulnerable org types this framework serves; overstated as universal</p></article><article class="claim-item"><h3>Responsible AI governance is an organizational change challenge</h3><p><strong>Type:</strong> normative · <strong>Priority:</strong> not_ranked</p><p><strong>Evidence needed:</strong> Comparative outcomes from orgs using change-leadership vs. compliance-first AI governance approaches</p><p><strong>Likely sources:</strong> implementation records, sector research, case studies</p><p><strong>Suggested queries:</strong> change management AI governance nonprofit outcomes, compliance vs culture AI policy effectiveness</p><p><strong>Support/contrast:</strong> not_ranked_for_truth</p><p><strong>Uncertainty:</strong> This is the document&#x27;s core argument - it is a values claim, not a factual one, and should be evaluated as such</p></article></section>
+      
+      
+      <section id="traps"><h2>Reasoning Trap Checks</h2><article class="trap-item"><h3>Causation-leap risk</h3><p><strong>Risk:</strong> Risk of reading timing or association as if it proves direction or cause.</p><p><strong>Next check:</strong> Ask what comparison would separate coincidence from cause.</p><p><strong>Severity:</strong> high</p></article><article class="trap-item"><h3>Missing-denominator risk</h3><p><strong>Risk:</strong> Risk of treating a number as meaningful before knowing the denominator, sample size, or comparison group.</p><p><strong>Next check:</strong> Ask what the number is out of and which comparison group makes it interpretable.</p><p><strong>Severity:</strong> high</p></article><article class="trap-item"><h3>Comfortable-answer risk</h3><p><strong>Risk:</strong> Risk of treating the easiest answer as settled before pressure-testing alternatives.</p><p><strong>Next check:</strong> Ask what evidence would make this answer harder to defend.</p><p><strong>Severity:</strong> medium</p></article><article class="trap-item"><h3>Binary-frame risk</h3><p><strong>Risk:</strong> Risk of collapsing a messy decision into a yes-or-no frame and missing a middle path.</p><p><strong>Next check:</strong> Ask what third option, delay, or partial step has been left out.</p><p><strong>Severity:</strong> medium</p></article><article class="trap-item"><h3>Base-rate neglect risk</h3><p><strong>Risk:</strong> Risk of judging the claim without comparing it to the normal rate or background pattern.</p><p><strong>Next check:</strong> Ask what baseline rate would make this finding look large, small, or ordinary.</p><p><strong>Severity:</strong> medium</p></article></section>
+      <section id="questions"><h2>Questions To Bring To The Text</h2><h3>Probing</h3><ul><li>Could you hand this to a nonprofit executive director who currently thinks &#x27;our data governance covers AI&#x27; and have them walk away convinced otherwise - and if not, what&#x27;s missing?</li><li>What does governance look like for a 3-person nonprofit that cannot implement two-layer structure - and does the framework leave them better or worse off than before they read it?</li><li>If the paid follow-up is gated behind a paywall, does this document give enough for a nonprofit to take one concrete action - or does it primarily create awareness of a problem without a path forward?</li></ul><h3>Follow-up</h3><ul><li>What specific scenario or example would make the AI-vs-data-governance distinction immediately clear to a skeptical nonprofit board?</li><li>How does the framework handle orgs that have already adopted AI tools widely - is &#x27;redacted implementation section&#x27; the right frame for them, or do they need a different entry point?</li><li>What would the author say to a nonprofit that reads this and concludes &#x27;this is good but we&#x27;ll wait for the paid guide before doing anything&#x27; - is that an acceptable outcome for this document?</li></ul></section>
+      
+    </div>
+  </main>
+</body>
+</html>
