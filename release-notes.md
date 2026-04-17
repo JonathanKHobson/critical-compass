@@ -2,9 +2,9 @@
 
 This release packages Critical Compass for friendly beta distribution.
 
-- Claude Cowork add-on file for Claude Cowork, Claude Code, and Codex.
+- Claude Cowork plugin zip for Claude Cowork and Claude Code.
 - Claude Desktop extension file for Claude Desktop Settings > Extensions.
-- Offline reference files for fallback use.
+- Skill files for skill / offline fallback use.
 - Diagnostics prompt for install troubleshooting.
 - Checksums for all downloadable artifacts.
 

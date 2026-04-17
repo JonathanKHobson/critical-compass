@@ -33,8 +33,8 @@
     h2 { margin: 0 0 10px; font-size: 1.35rem; }
     p { margin: 0 0 12px; }
     .lead { max-width: 760px; color: var(--muted); font-size: 1.08rem; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
-    .card { border: 1px solid var(--line); border-radius: 8px; padding: 18px; background: #fff; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { border: 1px solid var(--line); border-left: 4px solid var(--teal); border-radius: 8px; padding: 20px; background: #fff; }
     .tag { display: inline-block; color: #fff; background: var(--teal); border-radius: 8px; padding: 4px 8px; font-size: .85rem; }
     .button {
       display: inline-block;
@@ -48,7 +48,7 @@
     }
     .button.secondary { background: var(--coral); }
     .button.ghost { background: var(--leaf); }
-    section { padding: 14px 0; }
+    section { padding: 20px 0; }
     ol, ul { padding-left: 22px; }
     code { overflow-wrap: anywhere; }
     details { margin: 12px 0; }
@@ -87,6 +87,7 @@
       color: #fff;
     }
     .tab-panel[hidden] { display: none; }
+    .tab-panel > .card, .tab-panel > details.card { margin: 0 0 18px; }
     footer { padding: 28px 0 44px; color: var(--muted); }
     .notice { border-left: 4px solid var(--gold); }
   </style>
@@ -100,7 +101,7 @@
         <h1>Download Critical Compass</h1>
       </div>
     </div>
-    <p class="lead">A Claude AI add-on that helps nonprofits, advocacy teams, and grant writers pressure-test their writing before it goes out.</p>
+    <p class="lead">A Claude AI plugin that helps nonprofits, advocacy teams, and grant writers pressure-test their writing before it goes out.</p>
   </header>
   <main>
     <nav class="tab-nav" role="tablist" aria-label="Critical Compass download sections">
@@ -116,42 +117,46 @@
         <p>Critical Compass adds a critical thinking layer to Claude. Paste in a draft, a grant narrative, a public statement, or advocacy copy, and it will flag weak claims, assumptions, and language that could undermine your credibility. No API key, no Google account, no technical setup required beyond the one-time install.</p>
       </div>
 
-      <div class="card">
-        <h2>Start Here: Pick Your Path</h2>
-        <table>
-          <tr><td><strong>I use Claude Cowork, Claude Code, or Codex</strong></td><td>Download <code>critical-compass-plugin.zip</code></td></tr>
-          <tr><td><strong>I use the Claude Desktop app</strong></td><td>Download <code>critical-compass-0.1.0.mcpb</code></td></tr>
-          <tr><td><strong>Neither, or I want an offline reference</strong></td><td>Download <code>critical-compass.skill</code> or <code>skill.zip</code></td></tr>
-        </table>
-        <p><strong>You only need one file.</strong> Pick the row that matches how you use Claude.</p>
-      </div>
-
       <section class="grid">
         <div class="card">
-          <h2>Claude Cowork Add-On</h2>
-          <p>Best for Claude Cowork, Claude Code, and Codex. This is the main add-on file for most users.</p>
+          <h2>Claude Cowork Plugin</h2>
+          <p>Best for Claude Cowork or Claude Code. This is the main plugin zip for most users.</p>
           <p><span class="tag">v0.1.0-beta.3</span></p>
-          <a class="button" href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.3/critical-compass-plugin.zip" download>Download add-on</a>
+          <a class="button" href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.3/critical-compass-plugin.zip" download>Download Plugin</a>
+          <p><a href="#install-cowork">&rarr; How to install</a></p>
         </div>
         <div class="card">
           <h2>Claude Desktop Extension</h2>
           <p>Best if you use the Claude Desktop app and install extensions through Settings.</p>
           <p><span class="tag">v0.1.0-beta.3</span></p>
-          <a class="button secondary" href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.3/critical-compass-0.1.0.mcpb" download>Download extension</a>
+          <a class="button secondary" href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.3/critical-compass-0.1.0.mcpb" download>Download Extension</a>
+          <p><a href="#install-desktop">&rarr; How to install</a></p>
         </div>
         <div class="card">
-          <h2>Offline Reference File</h2>
-          <p>Use this fallback if the add-on or extension is not available in your Claude setup.</p>
+          <h2>Skill / Offline Fallback</h2>
+          <p>Use this if the plugin or extension is not available in your Claude setup.</p>
           <p><span class="tag">v0.1.0-beta.3</span></p>
-          <a class="button ghost" href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.3/critical-compass.skill" download>Download reference file</a>
-          <a class="button ghost" href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.3/skill.zip" download>Download zipped reference</a>
+          <a class="button ghost" href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.3/critical-compass.skill" download>Download Skill</a>
+          <a class="button ghost" href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.3/skill.zip" download>Download Skill Zip</a>
+          <p><a href="#install-skill">&rarr; How to install</a></p>
         </div>
       </section>
+
+      <div class="card">
+        <h2>Start Here: Pick Your Path</h2>
+        <table>
+          <tr><td><strong>I use Claude Cowork or Claude Code</strong></td><td>Download <a href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.3/critical-compass-plugin.zip" download><code>critical-compass-plugin.zip</code></a></td></tr>
+          <tr><td><strong>I use Claude Desktop</strong></td><td>Download <a href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.3/critical-compass-0.1.0.mcpb" download><code>critical-compass-0.1.0.mcpb</code></a></td></tr>
+          <tr><td><strong>I only want the skill / offline fallback</strong></td><td>Download <a href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.3/critical-compass.skill" download><code>critical-compass.skill</code></a> or <a href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.3/skill.zip" download><code>skill.zip</code></a></td></tr>
+        </table>
+        <p><strong>You only need one file.</strong> Pick the row that matches how you use Claude.</p>
+        <p>Using Codex? See the FAQ tab for status.</p>
+      </div>
     </section>
 
     <section id="install" class="tab-panel" role="tabpanel" aria-labelledby="tab-install" hidden>
-      <details class="card">
-        <summary>Claude Cowork, Claude Code, or Codex</summary>
+      <details id="install-cowork" class="card">
+        <summary>Claude Cowork or Claude Code</summary>
         <ol>
           <li>Download <code>critical-compass-plugin.zip</code>.</li>
           <li>Open Claude Cowork or Claude Code.</li>
@@ -161,10 +166,9 @@
           <li>Drag the zip file into the upload area.</li>
           <li>Done. Critical Compass is now active in your session.</li>
         </ol>
-        <p>Codex users can use this same add-on file and upload flow.</p>
       </details>
 
-      <details class="card">
+      <details id="install-desktop" class="card">
         <summary>Claude Desktop</summary>
         <ol>
           <li>Download <code>critical-compass-0.1.0.mcpb</code>.</li>
@@ -176,15 +180,15 @@
         </ol>
       </details>
 
-      <details class="card">
-        <summary>Offline Reference / Skill</summary>
+      <details id="install-skill" class="card">
+        <summary>Skill / Offline Fallback</summary>
         <ol>
           <li>Download <code>critical-compass.skill</code> or <code>skill.zip</code>. Either works.</li>
           <li>Open Claude or Claude Code.</li>
           <li>Go to <strong>Skills</strong>, then click the <strong>+</strong> button.</li>
           <li>Hover over <strong>Create Skill</strong>, then click <strong>Upload Skill</strong>.</li>
           <li>Drag in your downloaded file.</li>
-          <li>Done. Use this as a fallback if the add-on or extension is not available.</li>
+          <li>Done. Use this if the plugin or extension is not available.</li>
         </ol>
       </details>
 
@@ -205,15 +209,15 @@
       </div>
       <div class="card">
         <h2>Do I need to install all three files?</h2>
-        <p>No. Install one. The Claude Cowork add-on, the Claude Desktop extension file, and the offline reference file are three delivery methods for the same tool. Pick the one that matches your Claude setup.</p>
+        <p>No. Install one. The Claude Cowork plugin, the Claude Desktop extension, and the skill are three delivery methods for the same tool. Pick the one that matches your Claude setup.</p>
       </div>
       <div class="card">
-        <h2>What about Codex?</h2>
-        <p>Codex users install the same way as Claude Cowork. Use <code>critical-compass-plugin.zip</code> and follow the Cowork steps.</p>
+        <h2>Does this work with Codex?</h2>
+        <p>Codex support is being confirmed. We're verifying the install path before publishing instructions. Check back soon or open a GitHub issue to be notified.</p>
       </div>
       <div class="card">
         <h2>Why does Claude show a warning during install?</h2>
-        <p>Claude flags locally distributed add-ons as unverified because they are not listed in an official marketplace. This is expected behavior for developer-distributed tools. Install only if you trust the source.</p>
+        <p>Claude flags locally distributed plugins as unverified because they are not listed in an official marketplace. This is expected behavior for developer-distributed tools. Install only if you trust the source.</p>
       </div>
       <div class="card">
         <h2>Do I need a GitHub account to download?</h2>
@@ -296,6 +300,7 @@ Expected result:
   <script>
     const tabButtons = Array.from(document.querySelectorAll("[data-tab-target]"));
     const tabPanels = Array.from(document.querySelectorAll(".tab-panel"));
+    const installAnchorIds = new Set(["install-cowork", "install-desktop", "install-skill"]);
 
     function showTab(tabId, updateHash = true) {
       const targetPanel = document.getElementById(tabId) || document.getElementById("get-started");
@@ -311,15 +316,28 @@ Expected result:
       }
     }
 
+    function routeHash(updateHash = false) {
+      const hash = window.location.hash.replace("#", "");
+      const panelId = installAnchorIds.has(hash) ? "install" : (hash || "get-started");
+      showTab(panelId, updateHash);
+      if (installAnchorIds.has(hash)) {
+        const target = document.getElementById(hash);
+        if (target) {
+          target.open = true;
+          window.requestAnimationFrame(() => {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          });
+        }
+      }
+    }
+
     tabButtons.forEach((button) => {
       button.addEventListener("click", () => showTab(button.dataset.tabTarget));
     });
 
     window.addEventListener("hashchange", () => {
-      showTab(window.location.hash.replace("#", "") || "get-started", false);
+      routeHash(false);
     });
-
-    showTab(window.location.hash.replace("#", "") || "get-started", false);
 
     const installSteps = Array.from(document.querySelectorAll("#install details"));
     const openInstallStepsOnMobile = () => {
@@ -329,6 +347,7 @@ Expected result:
       });
     };
     openInstallStepsOnMobile();
+    routeHash(false);
 
     const copyButton = document.getElementById("copy-diagnostics");
     const diagnosticsPrompt = document.getElementById("diagnostics-prompt");
