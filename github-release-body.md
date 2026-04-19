@@ -11,4 +11,4 @@ Upload the files from `github-pages/downloads/` as GitHub Release assets, or pub
 - `critical-compass-example-report.html` and `critical-compass-example-report.pdf`: redacted public example audit.
 - `checksums.txt`: SHA-256 checksums.
 
-Claude's unverified developer/access warning is expected for locally shared plugins and extensions.
+Claude's unverified developer/access warning is expected for locally shared plugins and extensions. A Claude Artifact mirror is available at https://claude.ai/public/artifacts/9e50e78b-3877-40c0-855b-07031eb15c95.
