@@ -23,8 +23,8 @@ Download URLs:
 - Full release notes: https://github.com/JonathanKHobson/critical-compass/releases/tag/v0.1.0-beta.4
 
 Terminology lock:
-- Use "plugin", "plugin zip", "extension", "skill", and "skill / offline fallback".
-- Do not use "add-on", "reference file", or "offline reference".
+- Use "plugin", "plugin zip", "extension", "MCP connector", "skill", and "skill / prompt-only alternative".
+- Do not rename plugin, extension, MCP connector, or skill concepts. Do not describe the skill as an internet-free mode.
 - Do not invent install support for Codex. Keep Codex as a status note only: "Codex support is being confirmed."
 
 Artifact requirements:
@@ -38,6 +38,7 @@ QA checklist:
 - Four download actions are visible near the top: plugin, extension, skill, and skill zip.
 - The decision table filenames are clickable.
 - The skill card includes both critical-compass.skill and skill.zip.
+- The page says users can install more than one delivery format.
 - Codex does not appear as a supported install row or install flow.
 - The Advanced download verification section stays collapsed by default.
 - The terminology lock is followed.
@@ -168,21 +169,21 @@ BEGIN ARTIFACT SOURCE
       <section class="grid">
         <div class="card">
           <h2>Claude Cowork Plugin</h2>
-          <p>Best for Claude Cowork or Claude Code. This is the main plugin zip for most users.</p>
+          <p>Best for Claude Cowork or Claude Code. This bundle includes the Critical Compass MCP/extension, skill, and predefined agents.</p>
           <p><span class="tag">v0.1.0-beta.4</span></p>
           <a class="button" href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.4/critical-compass-plugin.zip" download>Download Plugin</a>
           <p><a href="#install-cowork">&rarr; How to install</a></p>
         </div>
         <div class="card">
           <h2>Claude Desktop Extension</h2>
-          <p>Best if you use the Claude Desktop app and install extensions through Settings.</p>
+          <p>Best if you use Claude Desktop. This is the MCP connector installed through Settings &rarr; Extensions.</p>
           <p><span class="tag">v0.1.0-beta.4</span></p>
           <a class="button secondary" href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.4/critical-compass-0.1.0.mcpb" download>Download Extension</a>
           <p><a href="#install-desktop">&rarr; How to install</a></p>
         </div>
         <div class="card">
-          <h2>Skill / Offline Fallback</h2>
-          <p>Use this if the plugin or extension is not available in your Claude setup.</p>
+          <h2>Skill / Prompt-Only Alternative</h2>
+          <p>A standalone skill Claude can read without the MCP connector. Useful on its own or alongside the plugin or extension.</p>
           <p><span class="tag">v0.1.0-beta.4</span></p>
           <a class="button ghost" href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.4/critical-compass.skill" download>Download Skill</a>
           <a class="button ghost" href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.4/skill.zip" download>Download Skill Zip</a>
@@ -194,10 +195,10 @@ BEGIN ARTIFACT SOURCE
         <h2>Start Here: Pick Your Path</h2>
         <table>
           <tr><td><strong>I use Claude Cowork or Claude Code</strong></td><td>Download <a href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.4/critical-compass-plugin.zip" download><code>critical-compass-plugin.zip</code></a></td></tr>
-          <tr><td><strong>I use Claude Desktop</strong></td><td>Download <a href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.4/critical-compass-0.1.0.mcpb" download><code>critical-compass-0.1.0.mcpb</code></a></td></tr>
-          <tr><td><strong>I only want the skill / offline fallback</strong></td><td>Download <a href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.4/critical-compass.skill" download><code>critical-compass.skill</code></a> or <a href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.4/skill.zip" download><code>skill.zip</code></a></td></tr>
+          <tr><td><strong>I use Claude Desktop</strong></td><td>Download the MCP connector <a href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.4/critical-compass-0.1.0.mcpb" download><code>critical-compass-0.1.0.mcpb</code></a></td></tr>
+          <tr><td><strong>I want the skill / prompt-only version</strong></td><td>Download <a href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.4/critical-compass.skill" download><code>critical-compass.skill</code></a> or <a href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.4/skill.zip" download><code>skill.zip</code></a></td></tr>
         </table>
-        <p><strong>You only need one file.</strong> Pick the row that matches how you use Claude.</p>
+        <p><strong>You can install more than one.</strong> Start with the row that matches how you use Claude. The skill can also be installed alongside the plugin or extension when you want the prompt-only version available too.</p>
         <p>Using Codex? See the FAQ tab for status.</p>
       </div>
     </section>
@@ -251,14 +252,14 @@ BEGIN ARTIFACT SOURCE
       </details>
 
       <details id="install-skill" class="card">
-        <summary>Skill / Offline Fallback</summary>
+        <summary>Skill / Prompt-Only Alternative</summary>
         <ol>
           <li>Download <code>critical-compass.skill</code> or <code>skill.zip</code>. Either works.</li>
           <li>Open Claude or Claude Code.</li>
           <li>Go to <strong>Skills</strong>, then click the <strong>+</strong> button.</li>
           <li>Hover over <strong>Create Skill</strong>, then click <strong>Upload Skill</strong>.</li>
           <li>Drag in your downloaded file.</li>
-          <li>Done. Use this if the plugin or extension is not available.</li>
+          <li>Done. Use this on its own, or install it alongside the plugin or extension when you want the prompt-only version available too.</li>
         </ol>
       </details>
 
@@ -279,11 +280,11 @@ BEGIN ARTIFACT SOURCE
       </div>
       <div class="card">
         <h2>What is an MCP connector or extension?</h2>
-        <p>MCP means Model Context Protocol. Claude may call related setup screens MCPs, connectors, or extensions depending on where you are installing. In this case, it is the way Claude connects to a local tool like Critical Compass.</p>
+        <p>MCP means Model Context Protocol. In this context, Claude may call the local tool connection an MCP, connector, or extension. Critical Compass's extension is the MCP connector: it gives Claude tools plus bundled indexes and resources for pressure-testing text.</p>
       </div>
       <div class="card">
         <h2>What is the difference between the plugin, extension, and skill?</h2>
-        <p><strong>Plugin zip:</strong> for Claude Cowork or Claude Code. <strong>Extension file:</strong> for Claude Desktop. <strong>Skill:</strong> fallback instructions Claude can read if the plugin or extension is not available. Install only one.</p>
+        <p><strong>Plugin zip:</strong> the Claude Cowork or Claude Code bundle. It includes the MCP/extension, skill, and predefined agents. <strong>Extension file:</strong> the Claude Desktop MCP connector, which gives Claude tools and bundled resources so it can do more with fewer tokens. <strong>Skill:</strong> the prompt-only alternative Claude can read without the MCP, though it may use more context. You can install more than one.</p>
       </div>
       <div class="card">
         <h2>Does this work with Codex?</h2>
@@ -314,8 +315,8 @@ BEGIN ARTIFACT SOURCE
           <summary>Advanced: Verify Download</summary>
           <p>These SHA-256 checksums help technical reviewers confirm that downloaded files match this release.</p>
           <table><tr><td>critical-compass-0.1.0.mcpb</td><td><code>79e3791536e2974b9fe08a9ccc59bdfaf416e08667c99f7b9bdc6bf13fedfda5</code></td></tr>
-<tr><td>critical-compass-plugin.zip</td><td><code>1ff45713ff4ee206b102a325c2c41ac684cb4c9bace8bdc982cc380b3a4b8bdc</code></td></tr>
-<tr><td>critical-compass-source.zip</td><td><code>730ba2ea7051acec7694f3e786ee9b57578011b21545ac368da78dec0bf4317a</code></td></tr>
+<tr><td>critical-compass-plugin.zip</td><td><code>55a3034ad3edc62c195a71a97746ee4954e9b4dd79aa649fe13abd5f09030f12</code></td></tr>
+<tr><td>critical-compass-source.zip</td><td><code>a33765a1e3b9ee1a8fec1958c60232377e1cc505338f7b22a88c3a4ebbd39841</code></td></tr>
 <tr><td>critical-compass.skill</td><td><code>4bdcb83b25367a18cd321a81bf63c99c2b6e00f989f9921187632cf07a95f9cf</code></td></tr>
 <tr><td>skill.zip</td><td><code>afcb323c8c1f015b6821411abf0ce966f3e06c1737ec748e8b1204073988f085</code></td></tr></table>
         </details>
