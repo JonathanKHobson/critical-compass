@@ -6,6 +6,7 @@ This release packages Critical Compass for friendly beta distribution.
 - Claude Desktop extension file for Claude Desktop Settings > Extensions.
 - Skill files for skill / offline fallback use.
 - Redacted public example audit in HTML, PDF, and Markdown.
+- Source zip for technical reviewers who want to inspect or rebuild the project.
 - Diagnostics prompt for install troubleshooting.
 - Checksums for all downloadable artifacts.
 

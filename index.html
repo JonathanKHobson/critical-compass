@@ -232,16 +232,20 @@
         <p>It is for nonprofits, grant writers, advocacy communicators, policy teams, public affairs staff, and anyone who submits, publishes, or presents written work that needs to hold up under scrutiny.</p>
       </div>
       <div class="card">
-        <h2>Do I need to install all three files?</h2>
-        <p>No. Install one. The Claude Cowork plugin, the Claude Desktop extension, and the skill are three delivery methods for the same tool. Pick the one that matches your Claude setup.</p>
+        <h2>What is an MCP connector or extension?</h2>
+        <p>MCP means Model Context Protocol. Claude may call related setup screens MCPs, connectors, or extensions depending on where you are installing. In this case, it is the way Claude connects to a local tool like Critical Compass.</p>
+      </div>
+      <div class="card">
+        <h2>What is the difference between the plugin, extension, and skill?</h2>
+        <p><strong>Plugin zip:</strong> for Claude Cowork or Claude Code. <strong>Extension file:</strong> for Claude Desktop. <strong>Skill:</strong> fallback instructions Claude can read if the plugin or extension is not available. Install only one.</p>
       </div>
       <div class="card">
         <h2>Does this work with Codex?</h2>
         <p>Codex support is being confirmed. We're verifying the install path before publishing instructions. Check back soon or open a GitHub issue to be notified.</p>
       </div>
       <div class="card">
-        <h2>Why does Claude show a warning during install?</h2>
-        <p>Claude flags locally distributed plugins as unverified because they are not listed in an official marketplace. This is expected behavior for developer-distributed tools. Install only if you trust the source.</p>
+        <h2>Is Critical Compass safe to install?</h2>
+        <p>Critical Compass is designed to run locally, uses bundled files, requires no API key, and avoids background scanning. Claude's warning is the generic warning it shows for locally shared third-party plugins and extensions. All internet-downloaded MCPs and plugins carry some risk, including malicious code, prompt injection, unexpected file access, or external API calls, so review the files with Claude, Codex, or a trusted technical reviewer before installing.</p>
       </div>
       <div class="card">
         <h2>Do I need a GitHub account to download?</h2>
@@ -255,11 +259,17 @@
         <p>This section is for IT reviewers, security-conscious users, and anyone troubleshooting installation.</p>
         <p><a class="button" href="https://github.com/JonathanKHobson/critical-compass/releases/tag/v0.1.0-beta.4">View full release notes</a></p>
         <p><a class="button ghost" href="claude-artifact-builder-prompt.md">Create a Claude Artifact version</a></p>
+        <section>
+          <h2>Download source files</h2>
+          <p>Use this zip if you want to inspect, modify, or rebuild Critical Compass yourself. It excludes private reports, generated release files, local state, env files, caches, and machine-specific artifacts.</p>
+          <p><a class="button ghost" href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.4/critical-compass-source.zip" download>Download Source Zip</a></p>
+        </section>
         <details>
           <summary>Advanced: Verify Download</summary>
           <p>These SHA-256 checksums help technical reviewers confirm that downloaded files match this release.</p>
-          <table><tr><td>critical-compass-0.1.0.mcpb</td><td><code>4c4687cd1d9ecbe635c046e155b891719d3cb4ae681681c3bc7ce90784a63ada</code></td></tr>
-<tr><td>critical-compass-plugin.zip</td><td><code>057d0413e50c87593d4960b0046247bc6115d7d37ea7941b350184fb07db1bce</code></td></tr>
+          <table><tr><td>critical-compass-0.1.0.mcpb</td><td><code>79e3791536e2974b9fe08a9ccc59bdfaf416e08667c99f7b9bdc6bf13fedfda5</code></td></tr>
+<tr><td>critical-compass-plugin.zip</td><td><code>1ff45713ff4ee206b102a325c2c41ac684cb4c9bace8bdc982cc380b3a4b8bdc</code></td></tr>
+<tr><td>critical-compass-source.zip</td><td><code>730ba2ea7051acec7694f3e786ee9b57578011b21545ac368da78dec0bf4317a</code></td></tr>
 <tr><td>critical-compass.skill</td><td><code>4bdcb83b25367a18cd321a81bf63c99c2b6e00f989f9921187632cf07a95f9cf</code></td></tr>
 <tr><td>skill.zip</td><td><code>afcb323c8c1f015b6821411abf0ce966f3e06c1737ec748e8b1204073988f085</code></td></tr></table>
         </details>
