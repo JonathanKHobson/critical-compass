@@ -89,8 +89,28 @@
     }
     .tab-panel[hidden] { display: none; }
     .tab-panel > .card, .tab-panel > details.card { margin: 0 0 18px; }
+    .author-card {
+      display: grid;
+      grid-template-columns: 96px minmax(0, 1fr);
+      gap: 18px;
+      align-items: center;
+    }
+    .author-photo {
+      width: 96px;
+      height: 96px;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+    .section-heading { padding: 6px 0 12px; }
+    .section-heading h2 { margin-bottom: 4px; }
     footer { padding: 28px 0 44px; color: var(--muted); }
     .notice { border-left: 4px solid var(--gold); }
+    @media (max-width: 640px) {
+      .author-card { grid-template-columns: 1fr; }
+      .author-photo { width: 84px; height: 84px; }
+    }
   </style>
 </head>
 <body>
@@ -224,6 +244,18 @@
     </section>
 
     <section id="faq" class="tab-panel" role="tabpanel" aria-labelledby="tab-faq" hidden>
+      <div class="card author-card">
+        <img class="author-photo" src="assets/jonathan-kyle-hobson.png" alt="Jonathan Kyle Hobson">
+        <div>
+          <h2>About the author</h2>
+          <p><strong>Jonathan Kyle Hobson</strong> is a UX/product researcher and AI tool builder focused on making complex reasoning tools usable for people doing high-stakes writing. He built Critical Compass as a practical pressure-testing toolbox for nonprofits, advocacy teams, grant writers, and public communicators who need their work to hold up under scrutiny.</p>
+          <p><a href="https://www.linkedin.com/in/jonathankylehobson/" target="_blank" rel="noopener">Connect on LinkedIn</a></p>
+        </div>
+      </div>
+      <div class="section-heading">
+        <h2>Frequently Asked Questions</h2>
+        <p>Quick answers about what Critical Compass does, how the files differ, and what to expect during install.</p>
+      </div>
       <div class="card">
         <h2>What does Critical Compass actually do?</h2>
         <p>Critical Compass is a reasoning layer, not a spell-checker. It asks the hard questions your reader may ask about evidence quality, claim strength, hidden assumptions, framing bias, missing voices, and language that could overstate your case.</p>
@@ -268,8 +300,8 @@
           <summary>Advanced: Verify Download</summary>
           <p>These SHA-256 checksums help technical reviewers confirm that downloaded files match this release.</p>
           <table><tr><td>critical-compass-0.1.0.mcpb</td><td><code>945f23486810456d8388cb0e6f80e782ed78647b29b20b51e54f0ed81ca69be2</code></td></tr>
-<tr><td>critical-compass-plugin.zip</td><td><code>cdda314ac79c0109076d6dc057ae60ff9df2dc47d0f4236c0d4075236a35d574</code></td></tr>
-<tr><td>critical-compass-source.zip</td><td><code>2027be4a16655908ed70edc55a37fc3f63fbe119d4e31bcf9ee1723f95313d9c</code></td></tr>
+<tr><td>critical-compass-plugin.zip</td><td><code>09f15548f844345d52413747a5486a016e96602643e60e75df66fe7a44c74cc1</code></td></tr>
+<tr><td>critical-compass-source.zip</td><td><code>d77c6800a847ce31a43c7337e8a2e6a1b6345b61816b96306d4313f45f146810</code></td></tr>
 <tr><td>critical-compass.skill</td><td><code>4bdcb83b25367a18cd321a81bf63c99c2b6e00f989f9921187632cf07a95f9cf</code></td></tr>
 <tr><td>skill.zip</td><td><code>afcb323c8c1f015b6821411abf0ce966f3e06c1737ec748e8b1204073988f085</code></td></tr></table>
         </details>
