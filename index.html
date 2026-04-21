@@ -175,6 +175,90 @@
         <p><strong>You can install more than one.</strong> Start with the row that matches how you use Claude. The skill can also be installed alongside the plugin or extension when you want the prompt-only version available too.</p>
         <p>Using Codex? See the FAQ tab for technical-user guidance.</p>
       </div>
+
+      <div class="card">
+        <h2>Your First Prompt</h2>
+        <p>Once Critical Compass is installed, copy one of these prompts into your AI to get started right away.</p>
+      </div>
+
+      <section class="grid">
+        <div class="card">
+          <h2>Quick Audit</h2>
+          <p><strong>When to use:</strong> You want fast critical feedback on something you just read or wrote.</p>
+          <textarea readonly>You have the Critical Compass skill active. Run a quick audit on the following text.
+
+Identify the top 2–3 concerns — bias, unsupported claims, logical gaps, or overreach. Be direct and concise. I don&#x27;t need a full breakdown, just what matters most.
+
+[Paste the text, claim, article excerpt, or argument you want audited here.]</textarea>
+        </div>
+        <div class="card">
+          <h2>Quick Audit with MCP</h2>
+          <p><strong>When to use:</strong> MCP is installed and you want a faster, pattern-matched scan backed by the knowledge base.</p>
+          <textarea readonly>You have the Critical Compass MCP connected. Run a quick scan on the text below.
+
+Use the MCP to surface the most relevant bias patterns, fallacy risks, and evidence gaps. Return a brief summary — top concerns only, no exhaustive lists.
+
+[Paste the text, headline, claim, or excerpt here.]
+
+Optional context: [Describe where this came from or why you&#x27;re auditing it — e.g., &quot;a LinkedIn post about a health study&quot; or &quot;an email from a colleague making a policy argument.&quot;]</textarea>
+        </div>
+        <div class="card">
+          <h2>Advanced Audit with MCP</h2>
+          <p><strong>When to use:</strong> You want a thorough, structured analysis — great for research, persuasive writing, policy, or anything high-stakes.</p>
+          <textarea readonly>You have the Critical Compass MCP connected. Run a full advanced audit on the content below.
+
+I want:
+- Bias identification with explanations (not just labels)
+- Fallacy and logic gap analysis
+- Evidence quality assessment
+- A Critical Integrity Snapshot score if available
+- Recommended next steps: what to trust, revise, verify, or reframe
+
+Content type: [e.g., article / study / speech / email / social post / internal memo]
+Domain: [e.g., health / politics / AI / business / education / general]
+Stakes: [e.g., I&#x27;m deciding whether to share this / act on it / cite it / publish it]
+
+[Paste the full content here.]</textarea>
+        </div>
+        <div class="card">
+          <h2>Claude Code / Agentic Workflow</h2>
+          <p><strong>When to use:</strong> You&#x27;re running Claude Code or an agentic setup and want Critical Compass to work as part of a multi-step reasoning pipeline.</p>
+          <textarea readonly>You have the Critical Compass MCP available as a tool. I want you to use it as part of an agentic audit workflow.
+
+Step 1 — Classify the content: identify domain, claim type, sensitivity level, and scope.
+Step 2 — Run the appropriate MCP audit tools based on that classification.
+Step 3 — Synthesize findings into a structured report with: key concerns, integrity score (if available), and a recommended action (trust / revise / verify / reframe).
+Step 4 — If any claims require external verification, flag them explicitly and suggest how I&#x27;d check them.
+
+Be thorough. Show your reasoning at each step.
+
+Content to audit:
+[Paste or describe the content here.]
+
+Additional context:
+- Source: [Where did this content come from?]
+- My goal: [e.g., I&#x27;m writing a response to this / deciding whether to publish / fact-checking before a meeting]
+- Priority: [e.g., speed vs. depth — quick flag or full breakdown?]</textarea>
+        </div>
+        <div class="card">
+          <h2>Skill Mode Only</h2>
+          <p><strong>When to use:</strong> You wrote something and want it improved — not critiqued, just made more fair, clear, and well-reasoned.</p>
+          <textarea readonly>You have the Critical Compass skill active. I&#x27;m not looking for an audit — I want coaching.
+
+Help me improve the argument or writing below so it is:
+- More fair and evidence-calibrated
+- Free of overclaims or unsupported assumptions
+- Stronger in structure and reasoning
+
+Don&#x27;t just flag problems — suggest specific rewrites where it matters most.
+
+What I wrote:
+[Paste your draft, argument, or claim here.]
+
+My goal with this writing:
+[e.g., I&#x27;m trying to persuade my team / submit this as a proposal / post this publicly / use this in a report.]</textarea>
+        </div>
+      </section>
     </section>
 
     <section id="example" class="tab-panel" role="tabpanel" aria-labelledby="tab-example" hidden>
@@ -299,9 +383,9 @@
         <details>
           <summary>Advanced: Verify Download</summary>
           <p>These SHA-256 checksums help technical reviewers confirm that downloaded files match this release.</p>
-          <table><tr><td>critical-compass-0.1.0.mcpb</td><td><code>945f23486810456d8388cb0e6f80e782ed78647b29b20b51e54f0ed81ca69be2</code></td></tr>
-<tr><td>critical-compass-plugin.zip</td><td><code>aa4f72823f8a0d1ca7e69e5308dfd3b9c3271980982da52c1ca15ff5feee874a</code></td></tr>
-<tr><td>critical-compass-source.zip</td><td><code>fa8da4b231d89aaccdba39e46c0e48168069aabf9dd4315637180f3e5fe7343e</code></td></tr>
+          <table><tr><td>critical-compass-0.1.0.mcpb</td><td><code>8323364e3ff5635498df1e9210407f8d29847d01395970324422119f93f3628d</code></td></tr>
+<tr><td>critical-compass-plugin.zip</td><td><code>da3ecd36f2c5d245588cb852ed6660e522cf447ab4f8b7ea1911561f23f5a6e7</code></td></tr>
+<tr><td>critical-compass-source.zip</td><td><code>1847c49231418cb9f3759e9fed2460f16464d7d8065f154b0e5ac326d433ec72</code></td></tr>
 <tr><td>critical-compass.skill</td><td><code>4bdcb83b25367a18cd321a81bf63c99c2b6e00f989f9921187632cf07a95f9cf</code></td></tr>
 <tr><td>skill.zip</td><td><code>afcb323c8c1f015b6821411abf0ce966f3e06c1737ec748e8b1204073988f085</code></td></tr></table>
         </details>
