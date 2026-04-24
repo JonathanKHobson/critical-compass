@@ -89,6 +89,15 @@
     }
     .tab-panel[hidden] { display: none; }
     .tab-panel > .card, .tab-panel > details.card { margin: 0 0 18px; }
+    .example-output { margin: 0 0 18px; }
+    .example-output-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
     .author-card {
       display: grid;
       grid-template-columns: 96px minmax(0, 1fr);
@@ -401,6 +410,9 @@ My goal with this writing:
         <a class="button secondary" href="examples/critical-compass-example-report.pdf" download>Download PDF Example</a>
         <a class="button ghost" href="examples/critical-compass-example-report.md" target="_blank" rel="noopener">View Markdown Example (new tab)</a>
       </div>
+      <figure class="example-output">
+        <img class="example-output-image" src="examples/critical-compass-claude-output-screenshot.png" alt="Stitched screenshot of a Claude conversation showing Critical Compass quick feedback output" loading="lazy">
+      </figure>
     </section>
 
     <section id="install" class="tab-panel" role="tabpanel" aria-labelledby="tab-install" hidden>
@@ -504,8 +516,8 @@ My goal with this writing:
           <summary>Advanced: Verify Download</summary>
           <p>These SHA-256 checksums help technical reviewers confirm that downloaded files match this release.</p>
           <table><tr><td>critical-compass-0.1.0.mcpb</td><td><code>8323364e3ff5635498df1e9210407f8d29847d01395970324422119f93f3628d</code></td></tr>
-<tr><td>critical-compass-plugin.zip</td><td><code>fbd8ff41974a63f8a05588ab6824b37ce6befee9132773fac99b9e859f80f6e8</code></td></tr>
-<tr><td>critical-compass-source.zip</td><td><code>aab7da4be1522193364fb4b1225ae3d3c320144fd6e897c53cd9e5a54a167b97</code></td></tr>
+<tr><td>critical-compass-plugin.zip</td><td><code>106df83211a7cf4bec62c337841ca4acf1790a9f15bae58c0353ef33ef0f7730</code></td></tr>
+<tr><td>critical-compass-source.zip</td><td><code>c9773495fef110322c316f10eb1b568e2dae144cc1c5f4499cc36cf0ae62f6da</code></td></tr>
 <tr><td>critical-compass.skill</td><td><code>4bdcb83b25367a18cd321a81bf63c99c2b6e00f989f9921187632cf07a95f9cf</code></td></tr>
 <tr><td>skill.zip</td><td><code>afcb323c8c1f015b6821411abf0ce966f3e06c1737ec748e8b1204073988f085</code></td></tr></table>
         </details>
