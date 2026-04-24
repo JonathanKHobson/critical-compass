@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Download Critical Compass</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%278%27 fill=%27%23f8fbf9%27/%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2723%27 fill=%27none%27 stroke=%27%230f766e%27 stroke-width=%275%27/%3E%3Cpath d=%27M39 14 33 35 15 42l16-14z%27 fill=%27%23d95f43%27/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%278%27 fill=%27%23f8fbf9%27/%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2723%27 fill=%27none%27 stroke=%27%230f766e%27 stroke-width=%275%27/%3E%3Cpath d=%27M40 12 34 34 52 46 30 39z%27 fill=%27%23d95f43%27/%3E%3Cpath d=%27M24 52 30 30 12 18 34 25z%27 fill=%27%23527a39%27/%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%274%27 fill=%27%2317211f%27/%3E%3C/svg%3E">
   <style>
     :root {
       color-scheme: light;
@@ -125,7 +125,7 @@
 <body>
   <header>
     <div class="brand">
-      <img alt="Critical Compass badge" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='16' fill='%23f8fbf9'/%3E%3Ccircle cx='60' cy='60' r='44' fill='none' stroke='%230f766e' stroke-width='8'/%3E%3Cpath d='M72 28 62 66 28 78l30-26z' fill='%23d95f43'/%3E%3Cpath d='M48 92 58 54l34-12-30 26z' fill='%23527a39'/%3E%3Ccircle cx='60' cy='60' r='7' fill='%2317211f'/%3E%3C/svg%3E">
+      <img alt="Compass badge" src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 120 120&#x27;%3E%3Crect width=&#x27;120&#x27; height=&#x27;120&#x27; rx=&#x27;16&#x27; fill=&#x27;%23f8fbf9&#x27;/%3E%3Ccircle cx=&#x27;60&#x27; cy=&#x27;60&#x27; r=&#x27;44&#x27; fill=&#x27;none&#x27; stroke=&#x27;%230f766e&#x27; stroke-width=&#x27;8&#x27;/%3E%3Cpath d=&#x27;M76 18 64 63 98 80 56 69z&#x27; fill=&#x27;%23d95f43&#x27;/%3E%3Cpath d=&#x27;M44 102 56 57 22 40 64 51z&#x27; fill=&#x27;%23527a39&#x27;/%3E%3Ccircle cx=&#x27;60&#x27; cy=&#x27;60&#x27; r=&#x27;7&#x27; fill=&#x27;%2317211f&#x27;/%3E%3C/svg%3E">
       <div>
         <span class="tag">Critical Compass 0.1.0-beta.5</span>
         <h1>Download Critical Compass</h1>
@@ -459,7 +459,7 @@ My goal with this writing:
 
       <section class="card notice">
         <h2>If Install Fails</h2>
-        <p>Use the diagnostics prompt in the Advanced tab before editing any files manually.</p>
+        <p>Use the <a href="#diagnostics-prompt">diagnostic prompt</a> in the Advanced tab before editing any files manually.</p>
       </section>
     </section>
 
@@ -520,8 +520,8 @@ My goal with this writing:
           <summary>Advanced: Verify Download</summary>
           <p>These SHA-256 checksums help technical reviewers confirm that downloaded files match this release.</p>
           <table><tr><td>critical-compass-0.1.0.mcpb</td><td><code>8323364e3ff5635498df1e9210407f8d29847d01395970324422119f93f3628d</code></td></tr>
-<tr><td>critical-compass-plugin.zip</td><td><code>a8e9199adf626a84419bb2da770f09c222f90911277a5d32bff62c45c75c3668</code></td></tr>
-<tr><td>critical-compass-source.zip</td><td><code>6fa4c3994e2d91193e8f7aaf843ed7bf086f50080d5eb3d0efffa413a3f5bc22</code></td></tr>
+<tr><td>critical-compass-plugin.zip</td><td><code>9a18638031af545bd9db863e1661f6a93af10ee561cf763584cdd77bfe42040d</code></td></tr>
+<tr><td>critical-compass-source.zip</td><td><code>e7901dbad3073731073fbc2ed22adcb969a67af7b73bcb51e8de5e6f9301d919</code></td></tr>
 <tr><td>critical-compass.skill</td><td><code>4bdcb83b25367a18cd321a81bf63c99c2b6e00f989f9921187632cf07a95f9cf</code></td></tr>
 <tr><td>skill.zip</td><td><code>afcb323c8c1f015b6821411abf0ce966f3e06c1737ec748e8b1204073988f085</code></td></tr></table>
         </details>
@@ -684,7 +684,7 @@ Expected result:
     const tabButtons = Array.from(document.querySelectorAll("[data-tab-target]"));
     const tabPanels = Array.from(document.querySelectorAll(".tab-panel"));
     const installAnchorIds = new Set(["install-cowork", "install-desktop", "install-skill"]);
-    const advancedAnchorIds = new Set(["ai-install-prompt"]);
+    const advancedAnchorIds = new Set(["ai-install-prompt", "diagnostics-prompt"]);
 
     function showTab(tabId, updateHash = true) {
       const targetPanel = document.getElementById(tabId) || document.getElementById("get-started");
