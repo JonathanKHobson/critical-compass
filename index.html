@@ -114,6 +114,12 @@
     }
     .section-heading { padding: 6px 0 12px; }
     .section-heading h2 { margin-bottom: 4px; }
+    .about-link { margin: -6px 0 18px; }
+    .footer-author { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line); }
+    .tool-breakdown { margin: 16px 0 0; }
+    .tool-breakdown dt { font-weight: 700; margin: 14px 0 4px; }
+    .tool-breakdown dd { margin: 0; padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); }
+    .tool-breakdown dd p:last-child { margin-bottom: 0; }
     footer { padding: 28px 0 44px; color: var(--muted); }
     .notice { border-left: 4px solid var(--gold); }
     @media (max-width: 640px) {
@@ -136,9 +142,10 @@
   <main>
     <nav class="tab-nav" role="tablist" aria-label="Critical Compass download sections">
       <button id="tab-get-started" role="tab" aria-controls="get-started" aria-selected="true" data-tab-target="get-started">Get Started</button>
-      <button id="tab-faq" role="tab" aria-controls="faq" aria-selected="false" data-tab-target="faq">About &amp; FAQ</button>
+      <button id="tab-about" role="tab" aria-controls="about" aria-selected="false" data-tab-target="about">About</button>
       <button id="tab-install" role="tab" aria-controls="install" aria-selected="false" data-tab-target="install">Install Guide</button>
       <button id="tab-example" role="tab" aria-controls="example" aria-selected="false" data-tab-target="example">Example</button>
+      <button id="tab-faq" role="tab" aria-controls="faq" aria-selected="false" data-tab-target="faq">FAQ</button>
       <button id="tab-advanced" role="tab" aria-controls="advanced" aria-selected="false" data-tab-target="advanced">Advanced</button>
     </nav>
 
@@ -390,38 +397,277 @@ My goal with this writing:
 &quot;&quot;&quot;</textarea>
         </div>
       </section>
+
+
+<div class="card author-card">
+        <img class="author-photo" src="assets/jonathan-kyle-hobson.png" alt="Jonathan Kyle Hobson">
+        <div>
+          <h2>About the author</h2>
+          <p><strong>Jonathan Kyle Hobson</strong> is a UX researcher, product strategist, and AI tool builder with 10+ years of experience across design, storytelling, and emerging technology. He holds a master's degree in User Experience from Arizona State University. Kyle created Critical Compass to give nonprofits, advocacy teams, and public communicators a practical, rigorous way to pressure-test their work, because high-stakes writing deserves the same scrutiny as high-stakes decisions.</p>
+          <p><a href="https://www.linkedin.com/in/jonathankylehobson/" target="_blank" rel="noopener">Connect on LinkedIn</a></p>
+        </div>
+      </div>
+      <p class="about-link"><a href="#about">Read more about this project &rarr;</a></p>
     </section>
 
-    <section id="example" class="tab-panel" role="tabpanel" aria-labelledby="tab-example" hidden>
+    <section id="about" class="tab-panel" role="tabpanel" aria-labelledby="tab-about" hidden>
       <div class="card">
-        <h2>Example</h2>
-        <p>See what a finished Critical Compass audit can look like.</p>
-        <p>This public example is redacted to protect unpublished source material.</p>
+        <h2>What Is Critical Compass?</h2>
+        <p>Critical Compass is a local critical-thinking assistant for pressure-testing written work before it is published, submitted, shared, or used to make a decision. It is designed for drafts that need to hold up under scrutiny: grant narratives, advocacy writing, public statements, reports, articles, policy arguments, and other high-stakes text.</p>
+        <p>It does not just proofread. Critical Compass looks for the reasoning underneath the writing: the central claims, evidence gaps, assumptions, possible bias patterns, missing stakeholder perspectives, framing risks, audience fit, and claims that need verification. It helps answer a practical question: if someone smart and skeptical read this, where would it hold up and where would it break?</p>
+        <p>For non-technical users, it works like a structured review partner. For technical users, it exposes a local audit workflow with tools for quick scans, full audits, claim stress tests, reasoning-framework lookup, saved audit results, report generation, and advanced multi-perspective review.</p>
       </div>
+
       <div class="card">
-        <h2>Finished Audit Snapshot</h2>
-        <p><strong>Verdict:</strong> Moderate Integrity · <strong>Score:</strong> 71/100</p>
-        <p>The example shows how Critical Compass turns a draft into a reader-ready pressure test: plain-language risk summary, evidence gaps, missing voices, assumptions, reasoning traps, and concrete next steps.</p>
-        <ul>
-          <li>Flags claims that need stronger evidence before publication.</li>
-          <li>Names missing stakeholder perspectives and framing limits.</li>
-          <li>Separates check-worthy claims from claims that are actually false.</li>
-          <li>Gives revision prompts that help strengthen the text without flattening its purpose.</li>
-        </ul>
-        <a class="button" href="examples/critical-compass-example-report.html" target="_blank" rel="noopener">Open HTML Example (new tab)</a>
-        <a class="button secondary" href="examples/critical-compass-example-report.pdf" download>Download PDF Example</a>
-        <a class="button ghost" href="examples/critical-compass-example-report.md" target="_blank" rel="noopener">View Markdown Example (new tab)</a>
+        <h2>How It's Built</h2>
+        <p>Critical Compass is distributed as a local MCP/extension, a Claude Cowork or Claude Code plugin, and a prompt-only skill. The MCP exposes tools for onboarding, routing, quick scans, full audits, advanced audits, claim stress tests, fact-check planning, knowledge-base lookup, saved results, pattern tracking, and report generation.</p>
+        <p>Under the hood, it combines structured audit workflows with a critical-thinking knowledge base. That knowledge base includes biases, fallacies, reasoning frameworks, thinking lenses, methodology checks, reasoning flows, and reusable audit scaffolds. The workflow layer turns those resources into repeatable review steps instead of asking the model to invent an audit process from scratch.</p>
+        <p>The system is local-first and scaffold-first by default. It can help identify what should be verified, but it does not require Google, Brave, provider keys, or live retrieval for its core audit workflows. Advanced audit paths add role and persona scaffolds for multi-perspective review while keeping the user in control of the final judgment.</p>
       </div>
+
       <div class="card">
-        <h2>Claude Conversation Snapshot</h2>
-        <p>This is a direct screenshot from Jonathan's Claude conversation using Critical Compass, included to show the kind of quick feedback brief the tool can produce.</p>
+        <h2>What's Inside</h2>
+        <p>Every tool this MCP exposes &mdash; what it does and how to call it.</p>
+
+      <dl class="tool-breakdown">
+        <dt><code>get_started</code></dt>
+        <dd>
+          <p>First-session onboarding: clarifies goal, intended audience, and audit depth, then routes to the right tool.</p>
+          <p><strong>Say:</strong> &ldquo;I'm new — help me get started with Critical Compass.&rdquo;</p>
+        </dd>
+        <dt><code>critical_compass_overview</code></dt>
+        <dd>
+          <p>Friendly map of what Critical Compass can do: workflows, case studies, starter prompts, and routing rules.</p>
+          <p><strong>Say:</strong> &ldquo;Give me an overview of Critical Compass.&rdquo;</p>
+        </dd>
+        <dt><code>prepare_audit_source</code></dt>
+        <dd>
+          <p>Extracts audit-ready text from a local PDF, using OCR if needed, before running any audit.</p>
+          <p><strong>Say:</strong> &ldquo;Prepare this PDF for audit.&rdquo;</p>
+        </dd>
+        <dt><code>quick_scan</code></dt>
+        <dd>
+          <p>Lightweight gut-check that returns a Critical Integrity Snapshot, top two biases, key tension, and one action — fast.</p>
+          <p><strong>Say:</strong> &ldquo;Quick-scan this text before I decide whether it needs a full audit.&rdquo;</p>
+        </dd>
+        <dt><code>audit_text</code></dt>
+        <dd>
+          <p>Full Critical Compass audit: assumptions, bias patterns, evidence gaps, argument structure, check-worthy claims, alternative frames, audience fit, framing openness, stakeholder fit, and persuasion risk.</p>
+          <p><strong>Say:</strong> &ldquo;Run a full Critical Compass audit on this text.&rdquo;</p>
+        </dd>
+        <dt><code>list_agent_personas</code></dt>
+        <dd>
+          <p>Shows available analyst personas for advanced multi-perspective audits and lets you customize before running.</p>
+          <p><strong>Say:</strong> &ldquo;Show me which personas are available for an advanced audit.&rdquo;</p>
+        </dd>
+        <dt><code>advanced_audit</code></dt>
+        <dd>
+          <p>Staged, multi-perspective audit with analyst personas, independent analyses, tension mapping, dissent ledger, debate, and synthesis — for high-stakes or stakeholder-sensitive review.</p>
+          <p><strong>Say:</strong> &ldquo;Run an advanced audit on this draft.&rdquo;</p>
+        </dd>
+        <dt><code>claim_stress_test</code></dt>
+        <dd>
+          <p>Turns one claim into a compact card: steelman, fallacy risk, when the pattern may be valid, probing questions, next actions.</p>
+          <p><strong>Say:</strong> &ldquo;Stress-test this claim: '[paste claim]'.&rdquo;</p>
+        </dd>
+        <dt><code>challenge_claim</code></dt>
+        <dd>
+          <p>Challenges a single claim with a steelman, named fallacy risk, and focused follow-up questions.</p>
+          <p><strong>Say:</strong> &ldquo;Challenge this claim for me.&rdquo;</p>
+        </dd>
+        <dt><code>factcheck_lookup</code></dt>
+        <dd>
+          <p>Builds a scaffold-first verification plan for factual claims — routes to local ClaimReview or guided research.</p>
+          <p><strong>Say:</strong> &ldquo;Create a fact-check plan for the high-priority claims.&rdquo;</p>
+        </dd>
+        <dt><code>lookup_bias</code></dt>
+        <dd>
+          <p>Returns one verified bias definition before citing it in an audit or analysis.</p>
+          <p><strong>Say:</strong> &ldquo;Define confirmation bias.&rdquo;</p>
+        </dd>
+        <dt><code>get_framework</code></dt>
+        <dd>
+          <p>Returns a reasoning framework or thinking lens with definition, template, and examples.</p>
+          <p><strong>Say:</strong> &ldquo;Show me the steel-manning framework.&rdquo;</p>
+        </dd>
+        <dt><code>get_entry</code></dt>
+        <dd>
+          <p>Resolves any Critical Compass knowledge-base entry by ID, slug, or title.</p>
+          <p><strong>Say:</strong> &ldquo;Look up [entry name] in Critical Compass.&rdquo;</p>
+        </dd>
+        <dt><code>get_reasoning_flow</code></dt>
+        <dd>
+          <p>Returns an executable reasoning flow — a step-by-step structured analysis pattern.</p>
+          <p><strong>Say:</strong> &ldquo;Give me a reasoning flow for evaluating policy claims.&rdquo;</p>
+        </dd>
+        <dt><code>search_knowledge_base</code></dt>
+        <dd>
+          <p>Searches the full Critical Compass KB when the exact concept name is unknown.</p>
+          <p><strong>Say:</strong> &ldquo;Search Critical Compass for [topic].&rdquo;</p>
+        </dd>
+        <dt><code>list_concept_examples</code></dt>
+        <dd>
+          <p>Browsable examples of biases, fallacies, reasoning frameworks, thinking lenses, and methodology checks.</p>
+          <p><strong>Say:</strong> &ldquo;Show me examples of cognitive biases I can apply.&rdquo;</p>
+        </dd>
+        <dt><code>list_categories</code></dt>
+        <dd>
+          <p>Lists all knowledge-base categories with counts and entry IDs.</p>
+          <p><strong>Say:</strong> &ldquo;What categories are in the Critical Compass knowledge base?&rdquo;</p>
+        </dd>
+        <dt><code>list_reasoning_flows</code></dt>
+        <dd>
+          <p>Lists available executable reasoning flows by name and purpose.</p>
+          <p><strong>Say:</strong> &ldquo;What reasoning flows does Critical Compass have?&rdquo;</p>
+        </dd>
+        <dt><code>save_audit_result</code></dt>
+        <dd>
+          <p>Saves a completed audit result for later comparison, reporting, or reference.</p>
+          <p><strong>Say:</strong> &ldquo;Save this audit result.&rdquo;</p>
+        </dd>
+        <dt><code>get_audit_result</code></dt>
+        <dd>
+          <p>Loads one saved audit result by ID.</p>
+          <p><strong>Say:</strong> &ldquo;Load my saved audit [ID].&rdquo;</p>
+        </dd>
+        <dt><code>list_audit_results</code></dt>
+        <dd>
+          <p>Lists saved audit results with filters for text type, date, bias, score, and label.</p>
+          <p><strong>Say:</strong> &ldquo;List my saved audit results.&rdquo;</p>
+        </dd>
+        <dt><code>compare_audit_results</code></dt>
+        <dd>
+          <p>Diffs two saved final audit results: CIS delta, dimension changes, bias changes, and comparability warnings.</p>
+          <p><strong>Say:</strong> &ldquo;Compare audit results [ID1] and [ID2].&rdquo;</p>
+        </dd>
+        <dt><code>save_audit_progress</code></dt>
+        <dd>
+          <p>Saves resumable audit progress mid-session so a long audit can be paused and continued.</p>
+          <p><strong>Say:</strong> &ldquo;Save my audit progress.&rdquo;</p>
+        </dd>
+        <dt><code>get_audit_progress</code></dt>
+        <dd>
+          <p>Loads resumable audit progress and the prior-stage payload for a saved audit.</p>
+          <p><strong>Say:</strong> &ldquo;Resume my saved audit [ID].&rdquo;</p>
+        </dd>
+        <dt><code>list_audit_progress</code></dt>
+        <dd>
+          <p>Lists saved audit progress sessions by status or text type.</p>
+          <p><strong>Say:</strong> &ldquo;Show my in-progress audits.&rdquo;</p>
+        </dd>
+        <dt><code>get_cis_revision_timeline</code></dt>
+        <dd>
+          <p>Returns the chronological revision history of the Critical Integrity Snapshot for a saved audit.</p>
+          <p><strong>Say:</strong> &ldquo;Show the CIS revision history for audit [ID].&rdquo;</p>
+        </dd>
+        <dt><code>save_bias_pattern</code></dt>
+        <dd>
+          <p>Tracks a recurring bias pattern across audits for longitudinal self-knowledge.</p>
+          <p><strong>Say:</strong> &ldquo;Save this recurring bias pattern.&rdquo;</p>
+        </dd>
+        <dt><code>save_entity_pattern</code></dt>
+        <dd>
+          <p>Tracks a recurring KB entity pattern (bias, framework, reasoning flow) across audits.</p>
+          <p><strong>Say:</strong> &ldquo;Save this entity pattern.&rdquo;</p>
+        </dd>
+        <dt><code>get_pattern_summary</code></dt>
+        <dd>
+          <p>Summarizes recurring saved patterns by entity type and text topic.</p>
+          <p><strong>Say:</strong> &ldquo;Summarize my saved patterns.&rdquo;</p>
+        </dd>
+        <dt><code>get_kb_addition</code></dt>
+        <dd>
+          <p>Loads a user-added KB overlay entry by addition ID or entry ID.</p>
+          <p><strong>Say:</strong> &ldquo;Load my KB addition [ID].&rdquo;</p>
+        </dd>
+        <dt><code>list_kb_additions</code></dt>
+        <dd>
+          <p>Lists all user-added KB overlay entries including draft and inactive records.</p>
+          <p><strong>Say:</strong> &ldquo;List my personal KB additions.&rdquo;</p>
+        </dd>
+        <dt><code>save_kb_addition</code></dt>
+        <dd>
+          <p>Saves a user-added KB entry as a draft; active overlay exposure requires a separate step.</p>
+          <p><strong>Say:</strong> &ldquo;Save this as a personal Critical Compass KB entry.&rdquo;</p>
+        </dd>
+        <dt><code>update_kb_addition</code></dt>
+        <dd>
+          <p>Updates a user-added KB overlay entry.</p>
+          <p><strong>Say:</strong> &ldquo;Update my KB addition [ID].&rdquo;</p>
+        </dd>
+        <dt><code>soft_delete_kb_addition</code></dt>
+        <dd>
+          <p>Soft-deletes a user-added KB overlay entry.</p>
+          <p><strong>Say:</strong> &ldquo;Remove my KB addition [ID].&rdquo;</p>
+        </dd>
+        <dt><code>flag_core_record</code></dt>
+        <dd>
+          <p>Marks a built-in KB record for review without mutating the core corpus.</p>
+          <p><strong>Say:</strong> &ldquo;Flag this Critical Compass record for review.&rdquo;</p>
+        </dd>
+        <dt><code>list_core_review_flags</code></dt>
+        <dd>
+          <p>Lists review flags on built-in records.</p>
+          <p><strong>Say:</strong> &ldquo;Show my Critical Compass review flags.&rdquo;</p>
+        </dd>
+        <dt><code>generate_audit_report</code></dt>
+        <dd>
+          <p>Turns completed audit data into a stakeholder-ready PDF, Markdown file, manifest, and preview images.</p>
+          <p><strong>Say:</strong> &ldquo;Generate a PDF report from this completed audit.&rdquo;</p>
+        </dd>
+        <dt><code>generate_audit_artifact_viewer</code></dt>
+        <dd>
+          <p>Creates a local read-only HTML viewer showing the PDF, Markdown, argument map, evidence plan, dissent ledger, and trust notes.</p>
+          <p><strong>Say:</strong> &ldquo;Open a local viewer for this report.&rdquo;</p>
+        </dd>
+        <dt><code>propose_mitigation_rewrite</code></dt>
+        <dd>
+          <p>Returns a structured rewrite scaffold with targeted mitigations for flagged issues.</p>
+          <p><strong>Say:</strong> &ldquo;Propose a rewrite that addresses the issues found.&rdquo;</p>
+        </dd>
+        <dt><code>suggest_next_steps</code></dt>
+        <dd>
+          <p>Suggests next critical-thinking actions based on the domain and surfaced biases from an audit.</p>
+          <p><strong>Say:</strong> &ldquo;What should I do next after this audit?&rdquo;</p>
+        </dd>
+        <dt><code>synthesize_audit_verdict</code></dt>
+        <dd>
+          <p>Synthesizes a final verdict from a completed advanced audit — aggregates panel analyses into a conclusion.</p>
+          <p><strong>Say:</strong> &ldquo;Synthesize the final verdict from this audit.&rdquo;</p>
+        </dd>
+        <dt><code>run_audit_debate</code></dt>
+        <dd>
+          <p>Returns the structured-debate scaffold from an advanced audit for the dissent and tension stage.</p>
+          <p><strong>Say:</strong> &ldquo;Run the debate stage of this advanced audit.&rdquo;</p>
+        </dd>
+        <dt><code>run_independent_audit_analysis</code></dt>
+        <dd>
+          <p>Returns the independent-analysis scaffold — one analyst persona's pass before the debate stage.</p>
+          <p><strong>Say:</strong> &ldquo;Run an independent analysis for [persona].&rdquo;</p>
+        </dd>
+        <dt><code>define_audit_agents</code></dt>
+        <dd>
+          <p>Returns the agent-definition scaffold for an advanced audit, specifying persona roles and stage contracts.</p>
+          <p><strong>Say:</strong> &ldquo;Define the agents for this advanced audit.&rdquo;</p>
+        </dd>
+        <dt><code>map_audit_tensions</code></dt>
+        <dd>
+          <p>Returns the tension-map scaffold identifying where analyst personas disagree.</p>
+          <p><strong>Say:</strong> &ldquo;Map the tensions from this advanced audit.&rdquo;</p>
+        </dd>
+      </dl>
       </div>
-      <figure class="example-output">
-        <img class="example-output-image" src="examples/critical-compass-claude-output-screenshot.png" alt="Stitched screenshot of a Claude conversation showing Critical Compass quick feedback output" loading="lazy">
-      </figure>
+
+      <div class="card">
+        <h2>How I Use It</h2>
+        <p>I use Critical Compass when I want to slow down before trusting, publishing, citing, sharing, or acting on a piece of writing. It is especially useful for articles, research papers, drafts, or other writing someone sends me when I need to know whether the evidence, assumptions, framing, and audience fit are actually strong enough.</p>
+        <p>For quick reads, I use a quick scan for the plain-language read, the Before Using This Text caution, and the one action worth taking next. For important drafts, I use a full audit so the tool can map claims, surface evidence gaps, flag reasoning traps, and suggest what would make the argument more credible. For high-stakes or politically sensitive work, I use advanced audit mode because multiple perspectives are better than one confident pass.</p>
+        <p>I use it as a decision-support tool, not as an automatic judge. Claude is strong at conversational synthesis and stakeholder-sensitive framing; Codex is useful when I want the audit turned into structured artifacts, reports, or implementation-ready follow-up work. In both cases, Critical Compass gives the model a disciplined review path instead of leaving the critique up to vibes.</p>
+        <p class="about-link"><a href="#example">See examples &rarr;</a></p>
+      </div>
     </section>
 
-    <section id="install" class="tab-panel" role="tabpanel" aria-labelledby="tab-install" hidden>
+<section id="install" class="tab-panel" role="tabpanel" aria-labelledby="tab-install" hidden>
       <section class="card notice">
         <h2>Verified Claude Surfaces</h2>
         <p>These install paths have been verified for Claude Desktop, Claude Cowork, and Claude Code. Local MCP/plugin and Desktop extension installs are not verified for Claude.ai in a web browser. The skill may work in other Claude surfaces, but this guide only documents the tested paths below.</p>
@@ -470,16 +716,37 @@ My goal with this writing:
       </section>
     </section>
 
-    <section id="faq" class="tab-panel" role="tabpanel" aria-labelledby="tab-faq" hidden>
-      <div class="card author-card">
-        <img class="author-photo" src="assets/jonathan-kyle-hobson.png" alt="Jonathan Kyle Hobson">
-        <div>
-          <h2>About the author</h2>
-          <p><strong>Jonathan Kyle Hobson</strong> is a UX researcher, product strategist, and AI tool builder with 10+ years of experience across design, storytelling, and emerging technology. He holds a master's degree in User Experience from Arizona State University. Kyle created Critical Compass to give nonprofits, advocacy teams, and public communicators a practical, rigorous way to pressure-test their work, because high-stakes writing deserves the same scrutiny as high-stakes decisions.</p>
-          <p><a href="https://www.linkedin.com/in/jonathankylehobson/" target="_blank" rel="noopener">Connect on LinkedIn</a></p>
-        </div>
+<section id="example" class="tab-panel" role="tabpanel" aria-labelledby="tab-example" hidden>
+      <div class="card">
+        <h2>Example</h2>
+        <p>See what a finished Critical Compass audit can look like.</p>
+        <p>This public example is redacted to protect unpublished source material.</p>
       </div>
-      <div class="section-heading">
+      <div class="card">
+        <h2>Finished Audit Snapshot</h2>
+        <p><strong>Verdict:</strong> Moderate Integrity · <strong>Score:</strong> 71/100</p>
+        <p>The example shows how Critical Compass turns a draft into a reader-ready pressure test: plain-language risk summary, evidence gaps, missing voices, assumptions, reasoning traps, and concrete next steps.</p>
+        <ul>
+          <li>Flags claims that need stronger evidence before publication.</li>
+          <li>Names missing stakeholder perspectives and framing limits.</li>
+          <li>Separates check-worthy claims from claims that are actually false.</li>
+          <li>Gives revision prompts that help strengthen the text without flattening its purpose.</li>
+        </ul>
+        <a class="button" href="examples/critical-compass-example-report.html" target="_blank" rel="noopener">Open HTML Example (new tab)</a>
+        <a class="button secondary" href="examples/critical-compass-example-report.pdf" download>Download PDF Example</a>
+        <a class="button ghost" href="examples/critical-compass-example-report.md" target="_blank" rel="noopener">View Markdown Example (new tab)</a>
+      </div>
+      <div class="card">
+        <h2>Claude Conversation Snapshot</h2>
+        <p>This is a direct screenshot from Jonathan's Claude conversation using Critical Compass, included to show the kind of quick feedback brief the tool can produce.</p>
+      </div>
+      <figure class="example-output">
+        <img class="example-output-image" src="examples/critical-compass-claude-output-screenshot.png" alt="Stitched screenshot of a Claude conversation showing Critical Compass quick feedback output" loading="lazy">
+      </figure>
+    </section>
+
+<section id="faq" class="tab-panel" role="tabpanel" aria-labelledby="tab-faq" hidden>
+            <div class="section-heading">
         <h2>Frequently Asked Questions</h2>
         <p>Quick answers about what Critical Compass does, how the files differ, and what to expect during install.</p>
       </div>
@@ -513,7 +780,7 @@ My goal with this writing:
       </div>
     </section>
 
-    <section id="advanced" class="tab-panel" role="tabpanel" aria-labelledby="tab-advanced" hidden>
+<section id="advanced" class="tab-panel" role="tabpanel" aria-labelledby="tab-advanced" hidden>
       <div class="card">
         <h2>Advanced</h2>
         <p>This section is for IT reviewers, security-conscious users, and anyone troubleshooting installation.</p>
@@ -575,7 +842,7 @@ Before installing, check for:
 - Unexpected network calls or external API dependencies
 - Hidden API keys or credential requirements
 - Suspicious scripts or broad file system access
-- Unrelated services bundled in
+- Unrelated third-party MCPs or services bundled in
 
 If you find anything concerning, STOP. Describe the concern clearly and ask me how to proceed. Do not install until I confirm.
 
@@ -607,7 +874,7 @@ For plugin, MCPB/Desktop extension, or skill installs:
 - Do not hand-edit installed plugin, extension, or skill cache folders.
 - Download and inspect the package, then determine the current add/install method for the user&#x27;s client.
 - If a UI step is required, guide me through it clearly and wait for me to confirm completion.
-- Do not add paid services, external APIs, provider keys, or unrelated servers unless I explicitly ask.
+- Do not add paid services, external APIs, provider keys, or third-party MCPs unless I explicitly ask.
 
 PHASE 5 - Smoke test
 After installing, confirm Critical Compass is available:
@@ -666,7 +933,7 @@ Safety rules:
 - Do not add Google/Brave/provider keys unless I explicitly ask.
 - Do not claim factcheck_lookup performed retrieval unless lookup_performed=true.
 - Do not treat &quot;no match&quot; as true or false.
-- Do not change unrelated servers while diagnosing this install.
+- Do not merge, install, or call third-party MCPs while diagnosing this install.
 - If manual config inspection is needed, read the current config first and preserve all existing entries.
 
 Expected result:
@@ -674,6 +941,7 @@ Expected result:
 - get_started and critical_compass_overview work.
 - If a feature is unavailable, explain whether it is an install issue, dependency issue, renderer/OCR limitation, or normal scaffold-first behavior.
 ```
+
 </textarea>
       </div>
       <div class="card">
@@ -685,6 +953,10 @@ Expected result:
   </main>
   <footer>
     <p>Fact-checking is scaffold-first by default: no Google, Brave, or provider key is required.</p>
+      <div class="footer-author">
+      <p><strong>Jonathan Kyle Hobson</strong> &mdash; UX researcher, product strategist, and AI tool builder.</p>
+      <p><a href="https://www.linkedin.com/in/jonathankylehobson/" target="_blank" rel="noopener">Connect on LinkedIn</a> &middot; <a href="#about">About this project</a></p>
+    </div>
   </footer>
   <script>
     const tabButtons = Array.from(document.querySelectorAll("[data-tab-target]"));
