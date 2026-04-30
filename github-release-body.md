@@ -1,6 +1,6 @@
-# Critical Compass v0.1.0-beta.9
+# Critical Compass v0.1.0-beta.10
 
-Beta.9 is the stabilization release after the local beta.8.x train: report validation, clean-render hardening, human-loop guidance, package sync, and public surface cleanup.
+Beta.10 is a delivery-layer hotfix on top of beta.9: silent-mode consent now honors Claude's flat confirmation state, report preflight is available directly from `generate_audit_report(preflight_check=true)`, and PDF render/QA failures now return the Markdown artifact plus a local error log instead of dropping the deliverable.
 
 ## Download Guide
 
@@ -14,7 +14,10 @@ Beta.9 is the stabilization release after the local beta.8.x train: report valid
 ## What's New
 
 - `validate_report_payload` dry-runs report payloads before rendering and can return schema docs with `schema_only=true`.
+- `generate_audit_report(preflight_check=true)` runs the same dry-run checks without writing files.
 - Advanced synthesis returns a `report_ready_payload` so host AIs have less brittle payload assembly work.
+- Advanced synthesis confirms accepted silent mode with `human_loop_confirmation`.
+- Markdown is written before PDF rendering; renderer or QA timeout failures preserve `markdown_path`, `markdown_hash`, and `render_error_log_path`.
 - PDF/HTML reports suppress placeholder/debug strings, raw enum values, and reader-facing internal notes.
 - CIS bands and action routing are explicit; low-score reports cannot render `Trust` as the primary action.
 - Human-loop guidance now foregrounds `PAUSE_REQUIRED` and Claude's native `Ask_User_Input_V0` style question UI.
