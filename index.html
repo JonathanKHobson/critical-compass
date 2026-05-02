@@ -235,14 +235,16 @@
 
       <div class="card">
         <h2>Pick Your Path</h2>
-        <p>Want your AI assistant to help install this? <a href="#ai-install-prompt">Use the AI-assisted install prompt.</a></p>
+        <p>Downloads are live for beta.10. Choose the plugin for Claude Cowork or Claude Code, the MCPB/Desktop Extension for Claude Desktop, or the standalone skill when tool access is unavailable.</p>
         <table>
-          <tr><td><strong>I use Claude Cowork or Claude Code</strong></td><td>Download <a href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.10/critical-compass-plugin.zip" download><code>critical-compass-plugin.zip</code></a></td></tr>
-          <tr><td><strong>I use Claude Desktop</strong></td><td>Download the MCP connector <a href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.10/critical-compass-0.1.0.mcpb" download><code>critical-compass-0.1.0.mcpb</code></a></td></tr>
-          <tr><td><strong>I want the skill / prompt-only version</strong></td><td>Download <a href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.10/critical-compass.skill" download><code>critical-compass.skill</code></a> or <a href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.10/skill.zip" download><code>skill.zip</code></a></td></tr>
+          <tr><td><strong>I want a fast first read</strong></td><td>Use the quick audit prompt for a plain-language risk read, the top concerns, and one next action before you share or cite a text.</td></tr>
+          <tr><td><strong>I need the full audit</strong></td><td>Use the full standard audit prompt for the Critical Integrity Snapshot, evidence gaps, reasoning traps, assumptions, missing voices, and what holds up.</td></tr>
+          <tr><td><strong>I want questions and calibration</strong></td><td>Use the advanced human-loop prompt when context, sensitivity, stakeholder perspective, or report readiness needs user input before the audit is finalized.</td></tr>
+          <tr><td><strong>I need a shareable deliverable</strong></td><td>Use the report-ready workflow after an audit payload has been validated, then generate Markdown, HTML, or PDF artifacts.</td></tr>
+          <tr><td><strong>I only want the prompt layer</strong></td><td>Install the skill or skill zip when the MCP connector is unavailable, or keep it alongside the plugin/extension as a lightweight fallback.</td></tr>
         </table>
-        <p><strong>You can install more than one.</strong> Start with the row that matches how you use Claude. The skill can also be installed alongside the plugin or extension when you want the prompt-only version available too.</p>
-        <p>Using Codex? See the FAQ tab for technical-user guidance.</p>
+        <p><strong>You can install more than one.</strong> Start with the plugin, extension, or skill that matches your Claude surface, then use the path above to decide what to do after install.</p>
+        <p>Want your AI assistant to help install this? <a href="#ai-install-prompt">Use the AI-assisted install prompt.</a> Using Codex? See the FAQ tab for technical-user guidance.</p>
       </div>
 
       <div class="card">
@@ -568,47 +570,52 @@ My goal with this writing:
     </section>
 
     <section id="install" class="tab-panel" role="tabpanel" aria-labelledby="tab-install" hidden>
+      <div class="section-heading">
+        <h2>Install Guide</h2>
+        <p>Choose the install path for the Claude surface you use. Critical Compass beta.10 install paths have been verified for Claude Desktop, Claude Cowork, and Claude Code; Claude.ai web-browser behavior is not claimed here.</p>
+      </div>
+
       <section class="card notice">
         <h2>Verified Claude Surfaces</h2>
         <p>These install paths have been verified for Claude Desktop, Claude Cowork, and Claude Code. Local MCP/plugin and Desktop extension installs are not verified for Claude.ai in a web browser. The skill may work in other Claude surfaces, but this guide only documents the tested paths below.</p>
       </section>
 
-      <details id="install-cowork" class="card">
-        <summary>Claude Cowork or Claude Code</summary>
-        <ol>
-          <li>Download <code>critical-compass-plugin.zip</code>.</li>
-          <li>Open Claude Cowork or Claude Code.</li>
-          <li>Click <strong>Customize</strong> in the left sidebar.</li>
-          <li>Under <strong>Personal Plugins</strong>, click the <strong>+</strong> button.</li>
-          <li>Hover over <strong>Create Plugin</strong>, then click <strong>Upload Plugin</strong>.</li>
-          <li>Drag the zip file into the upload area.</li>
-          <li>Done. Critical Compass is now active in your session.</li>
-        </ol>
-      </details>
-
-      <details id="install-desktop" class="card">
-        <summary>Claude Desktop</summary>
-        <ol>
-          <li>Download <code>critical-compass-0.1.0.mcpb</code>.</li>
-          <li>Open the Claude Desktop app.</li>
-          <li>Go to <strong>Settings</strong> &rarr; <strong>Extensions</strong>.</li>
-          <li>Drag the downloaded file into the Extensions panel.</li>
-          <li>A security warning will appear. This is expected; see the FAQ tab for why.</li>
-          <li>Done.</li>
-        </ol>
-      </details>
-
-      <details id="install-skill" class="card">
-        <summary>Skill / Prompt-Only Alternative</summary>
-        <ol>
-          <li>Download <code>critical-compass.skill</code> or <code>skill.zip</code>. Either works.</li>
-          <li>Open Claude or Claude Code.</li>
-          <li>Go to <strong>Skills</strong>, then click the <strong>+</strong> button.</li>
-          <li>Hover over <strong>Create Skill</strong>, then click <strong>Upload Skill</strong>.</li>
-          <li>Drag in your downloaded file.</li>
-          <li>Done. Use this on its own, or install it alongside the plugin or extension when you want the prompt-only version available too.</li>
-        </ol>
-      </details>
+      <section class="grid">
+        <div class="card" id="install-cowork">
+          <h2>Claude Cowork Plugin</h2>
+          <ol>
+            <li>Download <code>critical-compass-plugin.zip</code>.</li>
+            <li>Open Claude Cowork or Claude Code.</li>
+            <li>Click <strong>Customize</strong> in the left sidebar.</li>
+            <li>Under <strong>Personal Plugins</strong>, click the <strong>+</strong> button.</li>
+            <li>Hover over <strong>Create Plugin</strong>, then click <strong>Upload Plugin</strong>.</li>
+            <li>Drag the zip file into the upload area.</li>
+            <li>Use <code>critical_compass_overview</code> or one of the first prompts on the Get Started tab.</li>
+          </ol>
+        </div>
+        <div class="card" id="install-desktop">
+          <h2>Claude Desktop Extension</h2>
+          <ol>
+            <li>Download <code>critical-compass-0.1.0.mcpb</code>.</li>
+            <li>Open the Claude Desktop app.</li>
+            <li>Go to <strong>Settings</strong> &rarr; <strong>Extensions</strong>.</li>
+            <li>Drag the downloaded file into the Extensions panel.</li>
+            <li>Approve the standard local-extension warning.</li>
+            <li>Ask Claude to use Critical Compass for a quick or full audit.</li>
+          </ol>
+        </div>
+        <div class="card" id="install-skill">
+          <h2>Skill File or Skill Zip</h2>
+          <ol>
+            <li>Download <code>critical-compass.skill</code> or <code>skill.zip</code>.</li>
+            <li>Open Claude or Claude Code.</li>
+            <li>Go to <strong>Skills</strong>, then click the <strong>+</strong> button.</li>
+            <li>Hover over <strong>Create Skill</strong>, then click <strong>Upload Skill</strong>.</li>
+            <li>Drag in your downloaded file.</li>
+            <li>Use this on its own, or install it alongside the plugin or extension when you want the prompt-only version available too.</li>
+          </ol>
+        </div>
+      </section>
 
       <section class="card notice">
         <h2>If Install Fails</h2>
