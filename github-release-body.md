@@ -1,6 +1,6 @@
-# Critical Compass v0.1.0-beta.10
+# Critical Compass v0.1.0-beta.11
 
-Beta.10 is a delivery-layer hotfix on top of beta.9: silent-mode consent now honors Claude's flat confirmation state, report preflight is available directly from `generate_audit_report(preflight_check=true)`, and PDF render/QA failures now return the Markdown artifact plus a local error log instead of dropping the deliverable.
+Beta.11 is a course-reliability release on top of beta.10. It adds a standardized classroom audit prompt/resource, routes course users toward standard `audit_text`, keeps advanced panel review optional, and strengthens score-delta interpretation so class discussions focus on findings, severity, and revision decisions rather than small point changes.
 
 ## Download Guide
 
@@ -13,6 +13,11 @@ Beta.10 is a delivery-layer hotfix on top of beta.9: silent-mode consent now hon
 
 ## What's New
 
+- `classroom_standard_audit_prompt` scaffold for Week 2 / classroom bias-audit assignments.
+- `get_started` and `critical_compass_overview` now surface the classroom standard-audit path.
+- Public landing page includes a Classroom Bias Audit prompt card.
+- Standalone skill guidance includes the classroom prompt for prompt-only use.
+- `compare_audit_results` warns that score movement is diagnostic, not improvement proof by itself.
 - `validate_report_payload` dry-runs report payloads before rendering and can return schema docs with `schema_only=true`.
 - `generate_audit_report(preflight_check=true)` runs the same dry-run checks without writing files.
 - Advanced synthesis returns a `report_ready_payload` so host AIs have less brittle payload assembly work.
