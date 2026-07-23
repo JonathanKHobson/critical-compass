@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Critical Compass — Working Tools</title>
   <meta name="description" content="Critical Compass helps pressure-test written work before it travels — auditing evidence gaps, assumptions, framing risks, and missing voices.">
-  <link rel="icon" href="assets/working-tools-mark.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="/compass-suite/assets/brand/working-tools-favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/compass-suite/assets/brand/working-tools-icon-180.png">
   <style>
     /* working-tools-network-v2 */
     :root {
@@ -209,6 +210,7 @@
     }
   </style>
   <link rel="stylesheet" href="assets/network.css">
+  <link rel="stylesheet" href="/compass-suite/assets/css/network-frame.css">
 </head>
 <body>
 
@@ -294,7 +296,7 @@
           <p><a href="#install-desktop">&rarr; How to install</a></p>
         </div>
         <div class="card">
-          <h2>Skill / Prompt-Only Alternative</h2>
+          <h2>Skill</h2>
           <p>A standalone skill Claude can read without the MCP connector. Useful on its own or alongside the plugin or extension.</p>
           <p><span class="tag">v0.1.0-beta.11</span></p>
           <a class="button ghost" href="https://github.com/JonathanKHobson/critical-compass/releases/download/v0.1.0-beta.11/critical-compass.skill" download>Download Skill</a>
@@ -701,7 +703,7 @@ My goal with this writing:
             <li>Use <code>critical_compass_overview</code> or one of the first prompts on the Get Started tab.</li>
           </ol>
           <p class="install-subnote">If you only see Skills and Connectors, and Connectors only accepts a remote MCP URL, stop. That is not the plugin upload path.</p>
-          <ol class="install-walkthrough" aria-label="Claude Cowork plugin install screenshots">
+          <ol class="install-walkthrough">
             <li>
               <figure class="install-step-shot">
                 <img src="install-guide/plugin/plugin-01-open-claude-code.png" alt="Claude Code or Claude Cowork open before plugin installation" loading="lazy" decoding="async">
@@ -769,7 +771,7 @@ My goal with this writing:
             <li>Ask Claude to use Critical Compass for a quick or full audit.</li>
           </ol>
           <p class="install-subnote">If your Claude Desktop build does not show Settings &rarr; Extensions, do not hand-edit config as a beginner workaround. Use the diagnostic prompt.</p>
-          <ol class="install-walkthrough" aria-label="Claude Desktop extension install screenshots">
+          <ol class="install-walkthrough">
             <li>
               <figure class="install-step-shot">
                 <img src="install-guide/mcpb/mcpb-01-download.png" alt="Critical Compass MCPB file ready for install" loading="lazy" decoding="async">
@@ -813,7 +815,7 @@ My goal with this writing:
             <li>Use this on its own, or install it alongside the plugin or extension when you want the prompt-only version available too.</li>
           </ol>
           <p class="install-subnote">Use the skill when the MCP/plugin path is unavailable, or keep it as a prompt-only fallback alongside the tool connection.</p>
-          <ol class="install-walkthrough" aria-label="Critical Compass skill install screenshots">
+          <ol class="install-walkthrough">
             <li>
               <figure class="install-step-shot">
                 <img src="install-guide/skill/skill-01-open-skills.png" alt="Claude Skills area before upload" loading="lazy" decoding="async">
@@ -1255,5 +1257,6 @@ Expected result:
     wireCopyButton("copy-ai-install", "ai-install-text");
     wireCopyButton("copy-diagnostics", "diagnostics-prompt");
   </script>
+  <script type="module" src="/compass-suite/assets/js/network-frame.js"></script>
 </body>
 </html>
