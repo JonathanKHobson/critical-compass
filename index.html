@@ -1,26 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Download Critical Compass</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%278%27 fill=%27%23f8fbf9%27/%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2723%27 fill=%27none%27 stroke=%27%230f766e%27 stroke-width=%275%27/%3E%3Cpath d=%27M40 12 34 34 52 46 30 39z%27 fill=%27%23d95f43%27/%3E%3Cpath d=%27M24 52 30 30 12 18 34 25z%27 fill=%27%23527a39%27/%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%274%27 fill=%27%2317211f%27/%3E%3C/svg%3E">
+  <title>Critical Compass — Working Tools</title>
+  <meta name="description" content="Critical Compass helps pressure-test written work before it travels — auditing evidence gaps, assumptions, framing risks, and missing voices.">
+  <link rel="icon" href="assets/working-tools-mark.svg" type="image/svg+xml">
   <style>
-    /* compass-public-visual-system: uxhc-v1 */
+    /* working-tools-network-v2 */
     :root {
       color-scheme: light;
-      --bg: #f7faf7;
-      --paper: #ffffff;
-      --ink: #17211f;
-      --muted: #5f6f6a;
-      --teal: #0f766e;
-      --teal-dark: #0b5f59;
-      --coral: #d95f43;
-      --leaf: #527a39;
-      --gold: #d99c2b;
-      --line: #d9e5df;
-      --soft: #eef6f1;
-      --shadow: 0 18px 50px rgba(23, 33, 31, 0.08);
+      --bg: #f7faf7; --paper: #ffffff; --ink: #17211f; --muted: #5f6f6a;
+      --teal: #0f766e; --teal-dark: #0b5f59; --teal-lt: rgba(15,118,110,0.08);
+      --coral: #d95f43; --leaf: #527a39; --gold: #d99c2b;
+      --line: #d9e5df; --soft: #eef6f1; --danger: #9f2d20;
+      --shadow: 0 2px 8px rgba(23,33,31,0.06);
+      --shadow-md: 0 6px 20px rgba(23,33,31,0.10);
+      --font-display: Georgia, 'Times New Roman', serif;
+      --font-body: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --container: min(1120px, calc(100% - 32px));
+      --radius: 8px; --site-nav-h: 52px;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -209,31 +208,70 @@
 
     }
   </style>
+  <link rel="stylesheet" href="assets/network.css">
 </head>
 <body>
-  <header>
-    <div class="brand">
-      <img alt="Compass badge" src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 120 120&#x27;%3E%3Crect width=&#x27;120&#x27; height=&#x27;120&#x27; rx=&#x27;16&#x27; fill=&#x27;%23f8fbf9&#x27;/%3E%3Ccircle cx=&#x27;60&#x27; cy=&#x27;60&#x27; r=&#x27;44&#x27; fill=&#x27;none&#x27; stroke=&#x27;%230f766e&#x27; stroke-width=&#x27;8&#x27;/%3E%3Cpath d=&#x27;M76 18 64 63 98 80 56 69z&#x27; fill=&#x27;%23d95f43&#x27;/%3E%3Cpath d=&#x27;M44 102 56 57 22 40 64 51z&#x27; fill=&#x27;%23527a39&#x27;/%3E%3Ccircle cx=&#x27;60&#x27; cy=&#x27;60&#x27; r=&#x27;7&#x27; fill=&#x27;%2317211f&#x27;/%3E%3C/svg%3E">
-      <div>
-        <span class="tag">Critical Compass 0.1.0-beta.11</span>
-        <h1>Download Critical Compass</h1>
+
+  <a class="skip-link" href="#get-started">Skip to downloads</a>
+
+  <div id="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Reading progress"></div>
+
+  <nav class="site-nav" aria-label="Working Tools network">
+    <div class="site-nav-inner">
+      <a class="site-nav-brand" href="https://jonathankhobson.github.io/compass-suite/"><span>Working Tools</span></a>
+      <div class="site-nav-sep" aria-hidden="true"></div>
+      <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-menu">
+        <span class="site-nav-toggle-icon" aria-hidden="true"></span>
+        <span>Menu</span>
+      </button>
+      <div class="site-nav-links" id="site-nav-menu">
+        <a class="site-nav-link" href="https://jonathankhobson.github.io/compass-suite/">Library</a>
+        <a class="site-nav-link" aria-current="page" href="https://jonathankhobson.github.io/critical-compass/">Critical Compass</a>
+        <a class="site-nav-link" href="https://jonathankhobson.github.io/prompt-compass/">Prompt Compass</a>
+        <a class="site-nav-link" href="https://jonathankhobson.github.io/ux-heuristic-compass/">UX Heuristics</a>
+        <a class="site-nav-link" href="https://jonathankhobson.github.io/shareables/s/understanding-ai-2026/">AI Basics</a>
+        <a class="site-nav-link" href="https://jonathankhobson.github.io/what-is-an-mcp/">MCP Basics</a>
       </div>
     </div>
-    <p class="lead">Critical Compass helps nonprofits, advocacy teams, grant writers, and public-facing communicators pressure-test written work before it has to hold up under scrutiny.</p>
-    <div class="header-actions">
-      <a class="button ghost" href="https://jonathankhobson.github.io/compass-suite/">Back to Compass Suite</a>
-    </div>
-  </header>
-  <main>
-    <nav class="tab-nav" role="tablist" aria-label="Critical Compass download sections">
-      <button id="tab-get-started" role="tab" aria-controls="get-started" aria-selected="true" data-tab-target="get-started">Get Started</button>
-      <button id="tab-about" role="tab" aria-controls="about" aria-selected="false" data-tab-target="about">About</button>
-      <button id="tab-install" role="tab" aria-controls="install" aria-selected="false" data-tab-target="install">Install Guide</button>
-      <button id="tab-example" role="tab" aria-controls="example" aria-selected="false" data-tab-target="example">Example</button>
-      <button id="tab-faq" role="tab" aria-controls="faq" aria-selected="false" data-tab-target="faq">FAQ</button>
-      <button id="tab-advanced" role="tab" aria-controls="advanced" aria-selected="false" data-tab-target="advanced">Advanced</button>
-    </nav>
+  </nav>
 
+  <header class="hero" aria-label="Critical Compass">
+    <div class="hero-lockup">
+      <div class="hero-id">
+        <span class="hero-eyebrow">Critical Compass · v0.1.0-beta.11</span>
+        <h1>Pressure-test claims before they travel.</h1>
+      </div>
+    </div>
+    <p class="hero-lead">Critical Compass helps nonprofits, advocacy teams, grant writers, and public-facing communicators pressure-test written work before it has to hold up under scrutiny.</p>
+    <p class="hero-actions"><a class="button" href="#get-started">Choose a download</a><a class="button ghost" href="https://jonathankhobson.github.io/compass-suite/">Working Tools library</a></p>
+    <aside class="work-specimen" aria-label="Critical Compass claim audit specimen">
+      <div class="specimen-top"><span>Claim check / 07</span><span>Before release</span></div>
+      <h2>Separate the claim from its confidence.</h2>
+      <p class="specimen-before">The program clearly transformed community outcomes.</p>
+      <p class="specimen-after">The report documents higher attendance. It does not yet show which outcomes changed or whether the program caused the difference.</p>
+      <ol class="specimen-list"><li><span>01</span><strong>What holds up?</strong></li><li><span>02</span><strong>What needs evidence?</strong></li><li><span>03</span><strong>What is the next check?</strong></li></ol>
+      <div class="specimen-foot"><span>Evidence visible</span><span>Uncertainty intact</span></div>
+    </aside>
+  </header>
+
+  <div class="page-nav-wrap">
+    <div class="page-nav-inner">
+      <button class="section-nav-toggle" type="button" aria-expanded="false" aria-controls="section-nav-menu">
+        <span>Sections</span>
+        <span class="section-nav-current">Get Started</span>
+      </button>
+      <nav class="tab-nav" id="section-nav-menu" role="tablist" aria-label="Critical Compass sections">
+        <button type="button" id="tab-get-started" role="tab" aria-controls="get-started" aria-selected="true" data-tab-target="get-started">Get Started</button>
+        <button type="button" id="tab-about" role="tab" aria-controls="about" aria-selected="false" data-tab-target="about">About</button>
+        <button type="button" id="tab-install" role="tab" aria-controls="install" aria-selected="false" data-tab-target="install">Install Guide</button>
+        <button type="button" id="tab-example" role="tab" aria-controls="example" aria-selected="false" data-tab-target="example">Example</button>
+        <button type="button" id="tab-faq" role="tab" aria-controls="faq" aria-selected="false" data-tab-target="faq">FAQ</button>
+        <button type="button" id="tab-advanced" role="tab" aria-controls="advanced" aria-selected="false" data-tab-target="advanced">Advanced</button>
+      </nav>
+    </div>
+  </div>
+
+  <main>
     <section id="get-started" class="tab-panel" role="tabpanel" aria-labelledby="tab-get-started">
       <div class="card">
         <h2>What is Critical Compass?</h2>
@@ -290,7 +328,7 @@
           <h2>Skill Audit</h2>
           <p><strong>When to use:</strong> You have the Critical Compass skill installed and want a full audit without the MCP.</p>
           <button class="button secondary" type="button" id="copy-skill-audit">Copy prompt</button>
-          <textarea id="prompt-skill-audit" readonly>I have the Critical Compass skill installed.
+          <textarea id="prompt-skill-audit" aria-label="Critical Compass skill audit prompt" readonly>I have the Critical Compass skill installed.
 
 Before you begin the audit, ask me the following questions one at a time
 so you can calibrate your analysis:
@@ -325,7 +363,7 @@ Text to audit:
           <h2>Quick Audit with MCP</h2>
           <p><strong>When to use:</strong> You have the MCP connector or extension active and want a faster, knowledge-base-backed audit.</p>
           <button class="button secondary" type="button" id="copy-quick-audit-mcp">Copy prompt</button>
-          <textarea id="prompt-quick-audit-mcp" readonly>I have the Critical Compass MCP connector/extension active.
+          <textarea id="prompt-quick-audit-mcp" aria-label="Critical Compass quick MCP audit prompt" readonly>I have the Critical Compass MCP connector/extension active.
 
 Start by calling critical_compass_overview to orient yourself on the available
 tools and confirm the right path for a standard audit. You can also use
@@ -356,7 +394,7 @@ Content to audit:
           <h2>Classroom Bias Audit</h2>
           <p><strong>When to use:</strong> You are using Critical Compass in a course or assignment and need stable section order for peer discussion.</p>
           <button class="button secondary" type="button" id="copy-classroom-bias-audit">Copy prompt</button>
-          <textarea id="prompt-classroom-bias-audit" readonly>Please run a standard Critical Compass audit on the text below.
+          <textarea id="prompt-classroom-bias-audit" aria-label="Critical Compass classroom bias audit prompt" readonly>Please run a standard Critical Compass audit on the text below.
 
 Use this fixed frame:
 - Audience: [who this is for]
@@ -388,7 +426,7 @@ Here is the text to audit:
           <h2>Full Standard Audit with MCP</h2>
           <p><strong>When to use:</strong> You want a full structured audit with the MCP connector or extension, but not the multi-agent pipeline.</p>
           <button class="button secondary" type="button" id="copy-full-standard-audit-mcp">Copy prompt</button>
-          <textarea id="prompt-full-standard-audit-mcp" readonly>I have the Critical Compass MCP connector/extension active.
+          <textarea id="prompt-full-standard-audit-mcp" aria-label="Critical Compass full MCP audit prompt" readonly>I have the Critical Compass MCP connector/extension active.
 
 Call critical_compass_overview first to confirm the right audit path and
 available tools for a full standard audit.
@@ -425,7 +463,7 @@ Content to audit:
           <h2>Advanced Audit with Multi-Agent Support</h2>
           <p><strong>When to use:</strong> You want the full advanced pipeline with multi-agent support, human-in-the-loop pauses, and report-ready output.</p>
           <button class="button secondary" type="button" id="copy-advanced-audit-multi-agent">Copy prompt</button>
-          <textarea id="prompt-advanced-audit-multi-agent" readonly>I have the Critical Compass MCP connector/extension active.
+          <textarea id="prompt-advanced-audit-multi-agent" aria-label="Critical Compass advanced multi-agent audit prompt" readonly>I have the Critical Compass MCP connector/extension active.
 
 I want to run an advanced audit with multi-agent support and human-in-the-loop
 review on the content below. This is the full advanced audit pipeline, not
@@ -487,7 +525,7 @@ Context:
           <h2>Coaching Mode (Skill Only)</h2>
           <p><strong>When to use:</strong> You wrote the text and want help strengthening it without running a full audit.</p>
           <button class="button secondary" type="button" id="copy-coaching-mode-skill">Copy prompt</button>
-          <textarea id="prompt-coaching-mode-skill" readonly>I have the Critical Compass skill installed.
+          <textarea id="prompt-coaching-mode-skill" aria-label="Critical Compass coaching prompt" readonly>I have the Critical Compass skill installed.
 
 I want coaching mode - not an audit of someone else&#x27;s writing. I wrote
 this and I want help making it stronger, fairer, and more credible to a
@@ -895,7 +933,7 @@ My goal with this writing:
         <h2>AI-Assisted Install Prompt</h2>
         <p>Use this with a coding assistant that can inspect downloads, check your computer setup, and guide client-specific UI steps. Manual config edits are a technical fallback only; the assistant should preserve existing configuration and stop if the expected install surface is missing.</p>
         <button class="button" type="button" id="copy-ai-install">Copy install prompt</button>
-        <textarea id="ai-install-text" readonly>You are a careful, technically conservative AI install assistant. Your job is to help me add or install Critical Compass - optionally including the plugin, MCPB/Desktop extension, skill, or local MCP source - safely, without modifying unrelated configuration or introducing unexpected dependencies. Do not delete anything; only add.
+        <textarea id="ai-install-text" aria-label="Critical Compass AI-assisted install prompt" readonly>You are a careful, technically conservative AI install assistant. Your job is to help me add or install Critical Compass - optionally including the plugin, MCPB/Desktop extension, skill, or local MCP source - safely, without modifying unrelated configuration or introducing unexpected dependencies. Do not delete anything; only add.
 
 Critical Compass is a critical-thinking toolbox for pressure-testing written work before publication or submission.
 
@@ -991,7 +1029,7 @@ Constraints throughout:
         <h2>Diagnostics Prompt</h2>
         <p>If installation fails, copy this prompt into Claude, Claude Code, or Codex and attach the file you tried to install.</p>
         <button class="button" type="button" id="copy-diagnostics">Copy diagnostics prompt</button>
-        <textarea id="diagnostics-prompt" readonly># Critical Compass MCPB Installer / Diagnostic Prompt
+        <textarea id="diagnostics-prompt" aria-label="Critical Compass diagnostic prompt" readonly># Critical Compass MCPB Installer / Diagnostic Prompt
 
 Paste this into Claude, Claude Code, Codex, or another capable coding assistant when you want help installing or diagnosing Critical Compass.
 
@@ -1055,15 +1093,16 @@ Expected result:
   <footer class="suite-footer" role="contentinfo">
     <div class="suite-footer-card">
       <p class="suite-footer-note">Fact-checking is scaffold-first by default: no Google, Brave, or provider key is required.</p>
-      <p class="suite-footer-heading">Compass Suite is created and maintained by Jonathan Kyle Hobson.</p>
-      <p class="suite-footer-purpose">Local-first AI tools for reasoning, prompt work, UX review, and evidence-bound workflows.</p>
-      <nav class="suite-footer-grid" aria-label="Compass network footer">
+      <p class="suite-footer-heading">Critical Compass is part of Working Tools by J. Kyle Hobson.</p>
+      <p class="suite-footer-purpose">Public resources for writing, evidence, design, building, career work, teaching, and games with AI.</p>
+      <nav class="suite-footer-grid" aria-label="Working Tools network footer">
         <section class="suite-footer-group" aria-labelledby="footer-start-here">
           <h2 id="footer-start-here">Start Here</h2>
           <div class="suite-footer-links">
-            <a href="https://jonathankhobson.github.io/compass-suite/">Compass Suite Home</a>
-            <a href="https://jonathankhobson.github.io/compass-suite/#install">Install Guide</a>
+            <a href="https://jonathankhobson.github.io/compass-suite/">Working Tools Library</a>
+            <a href="https://jonathankhobson.github.io/shareables/s/understanding-ai-2026/">AI Basics</a>
             <a href="https://jonathankhobson.github.io/what-is-an-mcp/">MCP Basics</a>
+            <a href="https://jonathankhobson.github.io/compass-suite/#install">Install Guide</a>
           </div>
         </section>
         <section class="suite-footer-group" aria-labelledby="footer-public-compasses">
@@ -1083,20 +1122,62 @@ Expected result:
           </div>
         </section>
       </nav>
-      <p class="suite-footer-legal">&copy; 2026 Jonathan Kyle Hobson. Code AGPL-3.0-only; docs, prompts, skills, and methodology CC BY-SA 4.0 unless otherwise noted. Compass names, logos, author photo, and official trade dress reserved.</p>
+      <p class="suite-footer-legal">&copy; 2026 Jonathan Kyle Hobson. Code AGPL-3.0-only; docs, prompts, skills, and methodology CC BY-SA 4.0 unless otherwise noted. Product names and official brand assets are reserved.</p>
     </div>
   </footer>
   <script>
+    document.documentElement.classList.add("js-enabled");
+
     const tabButtons = Array.from(document.querySelectorAll("[data-tab-target]"));
     const tabPanels = Array.from(document.querySelectorAll(".tab-panel"));
     const installAnchorIds = new Set(["install-cowork", "install-desktop", "install-skill"]);
     const advancedAnchorIds = new Set(["ai-install-prompt", "diagnostics-prompt"]);
+    const siteNavToggle = document.querySelector(".site-nav-toggle");
+    const siteNavMenu = document.getElementById("site-nav-menu");
+    const sectionNavToggle = document.querySelector(".section-nav-toggle");
+    const sectionNavMenu = document.getElementById("section-nav-menu");
+    const sectionNavCurrent = document.querySelector(".section-nav-current");
+
+    function closeDisclosure(toggle, menu) {
+      if (!toggle || !menu) {
+        return;
+      }
+      toggle.setAttribute("aria-expanded", "false");
+      menu.classList.remove("is-open");
+    }
+
+    function wireDisclosure(toggle, menu) {
+      if (!toggle || !menu) {
+        return;
+      }
+      toggle.addEventListener("click", () => {
+        const willOpen = toggle.getAttribute("aria-expanded") !== "true";
+        toggle.setAttribute("aria-expanded", String(willOpen));
+        menu.classList.toggle("is-open", willOpen);
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          closeDisclosure(toggle, menu);
+        }
+      });
+      document.addEventListener("click", (event) => {
+        if (!toggle.contains(event.target) && !menu.contains(event.target)) {
+          closeDisclosure(toggle, menu);
+        }
+      });
+      menu.querySelectorAll("a, button").forEach((item) => {
+        item.addEventListener("click", () => closeDisclosure(toggle, menu));
+      });
+    }
 
     function showTab(tabId, updateHash = true) {
       const targetPanel = document.getElementById(tabId) || document.getElementById("get-started");
       tabButtons.forEach((button) => {
         const selected = button.dataset.tabTarget === targetPanel.id;
         button.setAttribute("aria-selected", String(selected));
+        if (selected && sectionNavCurrent) {
+          sectionNavCurrent.textContent = button.textContent.trim();
+        }
       });
       tabPanels.forEach((panel) => {
         panel.hidden = panel.id !== targetPanel.id;
@@ -1126,6 +1207,9 @@ Expected result:
     tabButtons.forEach((button) => {
       button.addEventListener("click", () => showTab(button.dataset.tabTarget));
     });
+
+    wireDisclosure(siteNavToggle, siteNavMenu);
+    wireDisclosure(sectionNavToggle, sectionNavMenu);
 
     window.addEventListener("hashchange", () => {
       routeHash(false);
