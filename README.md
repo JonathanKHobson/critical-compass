@@ -1,5 +1,15 @@
 # Critical Compass v0.1.0-beta.11
 
+## Historical repository
+
+This repository preserves the earlier public guide and downloads. Current methods
+and onboarding live in [Reasoning Toolkit](https://github.com/JonathanKHobson/working-tools-plugins/tree/main/plugins/reasoning-studio).
+Existing Pages URLs, release assets, checksums and examples remain available.
+
+The documentation below describes the preserved edition. Archival does not remove
+separately configured runtimes, change their data, or make the successor a bundled
+replacement for every historical backend.
+
 Structured critical review tools and a public download guide. Start with the [public guide](https://jonathankhobson.github.io/critical-compass/) and its installation choices.
 
 Beta.11 is a course-reliability release on top of beta.10. It adds a standardized classroom audit prompt/resource, routes course users toward standard `audit_text`, keeps advanced panel review optional, and strengthens score-delta interpretation so class discussions focus on findings, severity, and revision decisions rather than small point changes.
