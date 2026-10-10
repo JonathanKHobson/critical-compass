@@ -1,5 +1,7 @@
 # Critical Compass v0.1.0-beta.11
 
+Structured critical review tools and a public download guide. Start with the [public guide](https://jonathankhobson.github.io/critical-compass/) and its installation choices.
+
 Beta.11 is a course-reliability release on top of beta.10. It adds a standardized classroom audit prompt/resource, routes course users toward standard `audit_text`, keeps advanced panel review optional, and strengthens score-delta interpretation so class discussions focus on findings, severity, and revision decisions rather than small point changes.
 
 ## Download Guide
@@ -29,3 +31,9 @@ Beta.11 is a course-reliability release on top of beta.10. It adds a standardize
 - Runtime bundles exclude planning-registry material and do not rely on external MCP orchestration.
 
 Claude's unverified developer/access warning is expected for locally shared plugins and extensions. A Claude Artifact mirror is available at https://claude.ai/public/artifacts/9e50e78b-3877-40c0-855b-07031eb15c95.
+
+## Source and contribution boundaries
+
+This repository owns the public landing page, installation guidance, and preserved download copies. It is not the complete maintained runtime workspace. Use a versioned source package when a release provides one; do not reconstruct a package from the landing page. The current public release remains usable on its documented terms while successor packaging is separate work.
+
+For a website change, edit the page and its local assets, preview the affected route, and verify downloads and shared Compass navigation. For a package change, locate the owning source and reproduce that release before changing distribution links. Preserve existing versioned assets and checksums. See [AGENTS.md](AGENTS.md).
